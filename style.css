@@ -404,8 +404,8 @@ html, body {
     }
     /* Adjustments for content within 2-column portfolio tiles */
     .portfolio-tile-content .tile-text-block h3.title {
-        font-size: 0.9rem !important; 
-        line-height: 1.15 !important; /* Adjusted for better readability */
+        font-size: 0.9rem !important;
+        line-height: 1.15 !important;
         margin-bottom: 0.1rem !important;
     }
     .portfolio-tile-content .tile-text-block p {
@@ -413,10 +413,10 @@ html, body {
         line-height: 1.2 !important;
     }
     .portfolio-tile-content .icon i {
-        font-size: 1.8em; /* Smaller icon */
+        font-size: 1.8em;
     }
     .portfolio-item figure.portfolio-tile-content {
-        padding: 0.85rem 0.6rem; /* Adjusted padding */
+        padding: 0.85rem 0.6rem;
     }
 }
 
@@ -433,15 +433,19 @@ html, body {
         height: 150px;
     }
 
+    /* --- General Mobile Styles for Main Section Headings --- */
+    .content-section > h2.title.is-3.heading-font {
+        font-size: 1.4rem; /* Approx 30% smaller than desktop (2rem * 0.7) */
+        margin-bottom: 1rem !important; /* Adjusted margin for smaller title */
+        line-height: 1.25; /* Slightly increased line-height for readability */
+    }
+
     /* --- Homepage Content Specific Mobile Adjustments --- */
-    #home-content .content.is-medium p {
+    #home-content .content.is-medium p { 
         font-size: 0.95rem;
         line-height: 1.6;
     }
-    #home-content .title.is-3.heading-font {
-        font-size: 1.75rem;
-        margin-bottom: 0.75rem !important;
-    }
+
     #home-content .highlights-grid .title.is-4 {
         font-size: 1.25rem;
         margin-bottom: 1rem !important;
@@ -517,17 +521,17 @@ html, body {
 }
 
 /* Styles for very small mobile screens (e.g., < 481px) */
-/* This block is now REMOVED for portfolio items to ensure 2 columns on most mobiles.
-   If you need single column for portfolio on EXTREMELY NARROW screens, you can re-add it.
-   However, the styles below are for other elements that might need further refinement. */
 @media screen and (max-width: 480px) {
-    /* Further refine homepage text for very small screens if needed */
+    /* Further refine main section titles for very small screens */
+    .content-section > h2.title.is-3.heading-font {
+        font-size: 1.3rem; /* Smaller for very narrow screens */
+        margin-bottom: 0.75rem !important;
+    }
+
     #home-content .content.is-medium p {
         font-size: 0.9rem;
     }
-    #home-content .title.is-3.heading-font {
-        font-size: 1.6rem;
-    }
+
     #home-content .highlights-grid .title.is-4 {
         font-size: 1.15rem;
     }
@@ -535,34 +539,11 @@ html, body {
         font-size: 0.9rem;
     }
     #home-content .highlights-grid .box .is-size-7 {
-        font-size: 0.65rem; /* very small, use with caution */
+        font-size: 0.65rem; 
     }
 
-    /* About page hobby photos will inherit stacking from 768px,
-       but you could adjust their width/max-width further if needed for very narrow screens */
     #about-content .columns.is-variable.is-1.is-mobile.is-centered.is-vcentered.my-5 .column {
         width: 90% !important;
         max-width: 320px;
     }
-
-    /* IF two-column portfolio items are too cramped on very narrow screens,
-       you can uncomment this to make them single column again below 480px */
-    /*
-    .portfolio-css-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    .portfolio-tile-content .tile-text-block h3.title {
-        font-size: 1.15rem !important;
-    }
-    .portfolio-tile-content .tile-text-block p {
-        font-size: 0.85rem !important;
-    }
-    .portfolio-tile-content .icon i {
-        font-size: 2em;
-    }
-    .portfolio-item figure.portfolio-tile-content {
-        padding: 1.25rem 1rem;
-    }
-    */
 }
