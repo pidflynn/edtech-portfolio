@@ -2,10 +2,10 @@
 
 /* --- Style for Photo Captions --- */
 .about-photo figcaption {
-    margin-top: 0.5rem; 
-    line-height: 1.2; 
-    color: #4a4a4a; 
-    font-style: italic; 
+    margin-top: 0.5rem;
+    line-height: 1.2;
+    color: #4a4a4a;
+    font-style: italic;
 }
 
 /* Rule for ALL About page photos */
@@ -16,7 +16,7 @@
     display: block;
     border-radius: 4px;
 }
-.about-photo .image { 
+.about-photo .image {
     margin-bottom: 0.25rem;
 }
 
@@ -31,7 +31,7 @@
     word-wrap: break-word;
     margin-right: 20px;
     text-overflow: ellipsis;
-    color: #363636; 
+    color: #363636;
     font-weight: 600;
 }
 
@@ -57,7 +57,7 @@ body, .tag, .button, .input, .textarea, .select select, .file-cta, .file-name, .
 /* Layout Adjustments */
 html, body {
     height: 100%;
-    overflow: hidden; 
+    overflow: hidden;
 }
 .main-section {
     padding: 0;
@@ -77,7 +77,7 @@ html, body {
     justify-content: center;
 }
 
-.profile-pic img { 
+.profile-pic img {
     display: block;
     width: 225px;
     height: 225px;
@@ -124,32 +124,19 @@ html, body {
 /* --- PORTFOLIO ITEM STYLING (CSS GRID IMPLEMENTATION) --- */
 .portfolio-css-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 1rem; 
-}
-
-@media screen and (max-width: 1023px) { /* Tablet */
-    .portfolio-css-grid {
-        grid-template-columns: repeat(2, 1fr); 
-         gap: 0.75rem;
-    }
-}
-@media screen and (max-width: 768px) { /* Mobile */
-    .portfolio-css-grid {
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 0.75rem;
-    }
+    grid-template-columns: repeat(4, 1fr); /* Desktop: 4 columns */
+    gap: 1rem;
 }
 
 .portfolio-item {
     position: relative;
-    border-radius: 8px; 
+    border-radius: 8px;
     cursor: pointer;
     transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
-    background-color: #ffffff; 
+    background-color: #ffffff;
     box-shadow: 0 3px 6px rgba(0,0,0,0.06);
-    display: flex; 
-    flex-direction: column; 
+    display: flex;
+    flex-direction: column;
 }
 
 .portfolio-item:focus,
@@ -160,29 +147,29 @@ html, body {
 
 .portfolio-item figure.portfolio-tile-content {
     width: 100%;
-    flex-grow: 1; 
+    flex-grow: 1;
     margin: 0;
-    padding: 1.25rem 1rem; 
+    padding: 1.25rem 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    border-radius: 8px; 
+    border-radius: 8px;
 }
 
 /* Specific background colors for each tile */
-#portfolio-content .portfolio-item.tile-color-1 figure.portfolio-tile-content { background-color: #e7f3ed; } 
-#portfolio-content .portfolio-item.tile-color-2 figure.portfolio-tile-content { background-color: #fff8e1; } 
-#portfolio-content .portfolio-item.tile-color-3 figure.portfolio-tile-content { background-color: #e3e8f0; } 
-#portfolio-content .portfolio-item.tile-color-4 figure.portfolio-tile-content { background-color: #e3f2fd; } 
-#portfolio-content .portfolio-item.tile-color-5 figure.portfolio-tile-content { background-color: #fbe9e7; } 
-#portfolio-content .portfolio-item.tile-color-6 figure.portfolio-tile-content { background-color: #f3e5f5; } 
-#portfolio-content .portfolio-item.tile-color-7 figure.portfolio-tile-content { background-color: #e0f7fa; } 
-#portfolio-content .portfolio-item.tile-color-8 figure.portfolio-tile-content { background-color: #fffde7; } 
-#portfolio-content .portfolio-item.tile-color-9 figure.portfolio-tile-content { background-color: #e8f5e9; } 
-#portfolio-content .portfolio-item.tile-color-10 figure.portfolio-tile-content { background-color: #e1f5fe; } 
-#portfolio-content .portfolio-item.tile-color-11 figure.portfolio-tile-content { background-color: #f1f8e9; } 
+#portfolio-content .portfolio-item.tile-color-1 figure.portfolio-tile-content { background-color: #e7f3ed; }
+#portfolio-content .portfolio-item.tile-color-2 figure.portfolio-tile-content { background-color: #fff8e1; }
+#portfolio-content .portfolio-item.tile-color-3 figure.portfolio-tile-content { background-color: #e3e8f0; }
+#portfolio-content .portfolio-item.tile-color-4 figure.portfolio-tile-content { background-color: #e3f2fd; }
+#portfolio-content .portfolio-item.tile-color-5 figure.portfolio-tile-content { background-color: #fbe9e7; }
+#portfolio-content .portfolio-item.tile-color-6 figure.portfolio-tile-content { background-color: #f3e5f5; }
+#portfolio-content .portfolio-item.tile-color-7 figure.portfolio-tile-content { background-color: #e0f7fa; }
+#portfolio-content .portfolio-item.tile-color-8 figure.portfolio-tile-content { background-color: #fffde7; }
+#portfolio-content .portfolio-item.tile-color-9 figure.portfolio-tile-content { background-color: #e8f5e9; }
+#portfolio-content .portfolio-item.tile-color-10 figure.portfolio-tile-content { background-color: #e1f5fe; }
+#portfolio-content .portfolio-item.tile-color-11 figure.portfolio-tile-content { background-color: #f1f8e9; }
 
 /* Text and Icon colors for Tiles */
 #portfolio-content .portfolio-item.tile-color-1 figure.portfolio-tile-content .title,
@@ -190,61 +177,61 @@ html, body {
 #portfolio-content .portfolio-item.tile-color-9 figure.portfolio-tile-content .title,
 #portfolio-content .portfolio-item.tile-color-9 figure.portfolio-tile-content .icon i,
 #portfolio-content .portfolio-item.tile-color-11 figure.portfolio-tile-content .title,
-#portfolio-content .portfolio-item.tile-color-11 figure.portfolio-tile-content .icon i { color: #2e7d32 !important; } 
+#portfolio-content .portfolio-item.tile-color-11 figure.portfolio-tile-content .icon i { color: #2e7d32 !important; }
 
 #portfolio-content .portfolio-item.tile-color-2 figure.portfolio-tile-content .title,
 #portfolio-content .portfolio-item.tile-color-2 figure.portfolio-tile-content .icon i,
 #portfolio-content .portfolio-item.tile-color-8 figure.portfolio-tile-content .title,
-#portfolio-content .portfolio-item.tile-color-8 figure.portfolio-tile-content .icon i { color: #ef6c00 !important; } 
+#portfolio-content .portfolio-item.tile-color-8 figure.portfolio-tile-content .icon i { color: #ef6c00 !important; }
 
 #portfolio-content .portfolio-item.tile-color-3 figure.portfolio-tile-content .title,
-#portfolio-content .portfolio-item.tile-color-3 figure.portfolio-tile-content .icon i { color: #37474f !important; } 
+#portfolio-content .portfolio-item.tile-color-3 figure.portfolio-tile-content .icon i { color: #37474f !important; }
 
 #portfolio-content .portfolio-item.tile-color-4 figure.portfolio-tile-content .title,
 #portfolio-content .portfolio-item.tile-color-4 figure.portfolio-tile-content .icon i,
 #portfolio-content .portfolio-item.tile-color-7 figure.portfolio-tile-content .title,
 #portfolio-content .portfolio-item.tile-color-7 figure.portfolio-tile-content .icon i,
 #portfolio-content .portfolio-item.tile-color-10 figure.portfolio-tile-content .title,
-#portfolio-content .portfolio-item.tile-color-10 figure.portfolio-tile-content .icon i { color: #0277bd !important; } 
+#portfolio-content .portfolio-item.tile-color-10 figure.portfolio-tile-content .icon i { color: #0277bd !important; }
 
 #portfolio-content .portfolio-item.tile-color-5 figure.portfolio-tile-content .title,
-#portfolio-content .portfolio-item.tile-color-5 figure.portfolio-tile-content .icon i { color: #d84315 !important; } 
+#portfolio-content .portfolio-item.tile-color-5 figure.portfolio-tile-content .icon i { color: #d84315 !important; }
 
 #portfolio-content .portfolio-item.tile-color-6 figure.portfolio-tile-content .title,
-#portfolio-content .portfolio-item.tile-color-6 figure.portfolio-tile-content .icon i { color: #4e342e !important; } 
+#portfolio-content .portfolio-item.tile-color-6 figure.portfolio-tile-content .icon i { color: #4e342e !important; }
 
 
 .portfolio-tile-content .icon {
-    margin-bottom: 0.5rem; 
+    margin-bottom: 0.5rem;
     flex-shrink: 0;
 }
-.portfolio-tile-content .icon i { 
-    font-size: 2.2em; 
+.portfolio-tile-content .icon i {
+    font-size: 2.2em;
 }
 
 .portfolio-tile-content .tile-text-block {
-    flex-shrink: 0; 
+    flex-shrink: 0;
     width: 100%;
 }
 
-.portfolio-tile-content .tile-text-block h3.title { 
-    font-weight: 600 !important; 
-    line-height: 1.2 !important; 
+.portfolio-tile-content .tile-text-block h3.title {
+    font-weight: 600 !important;
+    line-height: 1.2 !important;
     margin-top: 0 !important;
-    margin-bottom: 0.2rem !important; 
-    font-size: 1.05rem !important; 
-    word-break: break-word; 
-    hyphens: auto; 
+    margin-bottom: 0.2rem !important;
+    font-size: 1.05rem !important;
+    word-break: break-word;
+    hyphens: auto;
 }
 
 .portfolio-tile-content .tile-text-block p {
-    line-height: 1.3 !important; 
-    font-size: 0.75rem !important; 
-    color: #5a5a5a !important; 
-    margin-top: 0 !important; 
+    line-height: 1.3 !important;
+    font-size: 0.75rem !important;
+    color: #5a5a5a !important;
+    margin-top: 0 !important;
     margin-bottom: 0 !important;
-    max-width: 100%; 
-    word-break: break-word; 
+    max-width: 100%;
+    word-break: break-word;
 }
 /* --- END OF PORTFOLIO ITEM STYLING --- */
 
@@ -265,17 +252,17 @@ html, body {
     transform: scale(0.95) translateY(10px);
     opacity: 0;
     transition: transform 0.25s ease-out, opacity 0.25s ease-out;
-    overflow: visible; 
-    border-radius: 8px; 
-    max-width: 720px; 
-    width: 90%; 
+    overflow: visible;
+    border-radius: 8px;
+    max-width: 720px;
+    width: 90%;
 }
 .modal.is-active .modal-card {
     transform: scale(1) translateY(0);
     opacity: 1;
 }
 .modal-card-head {
-    background-color: #f7f9fa; 
+    background-color: #f7f9fa;
     border-bottom: 1px solid #e6eaee;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -285,15 +272,15 @@ html, body {
     background-color: white;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-    padding: 2rem 2.5rem; 
+    padding: 2rem 2.5rem;
 }
-.modal-card-body .content h4.title.modal-section-heading { 
-    color: #3273dc; 
+.modal-card-body .content h4.title.modal-section-heading {
+    color: #3273dc;
     margin-bottom: 0.75rem;
     font-weight: 600;
-    border-bottom: 2px solid #eff5fb; 
+    border-bottom: 2px solid #eff5fb;
     padding-bottom: 0.5rem;
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
 }
 .modal-card-body .content .modal-section {
     margin-bottom: 1.75rem;
@@ -305,25 +292,25 @@ html, body {
 .modal-card-body .content #modal-project-description {
     line-height: 1.7;
     color: #4a4a4a;
-    font-size: 0.95rem; 
+    font-size: 0.95rem;
 }
 
 .modal-card-body .content #modal-project-tech.tags {
-    margin-top: 0.5rem; 
+    margin-top: 0.5rem;
 }
 .modal-card-body .content #modal-project-tech.tags .tag {
-    background-color: #eef6ff; 
-    color: #296fa8; 
+    background-color: #eef6ff;
+    color: #296fa8;
     font-weight: 500;
-    margin-bottom: 0.5rem; 
+    margin-bottom: 0.5rem;
     margin-right: 0.5rem;
-    font-size: 0.8rem; 
+    font-size: 0.8rem;
 }
 .modal-card-body .content #modal-project-tech.tags .tag.is-capitalized {
     text-transform: capitalize;
 }
 
-.hr.is-small-hr { 
+.hr.is-small-hr {
     height: 1px;
     background-color: #dbdbdb;
     margin: 1.5rem 0;
@@ -331,51 +318,51 @@ html, body {
 
 /* MODAL NAVIGATION ARROWS STYLING */
 .modal-nav-arrow {
-    position: fixed; 
+    position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 45; 
-    background-color: rgba(30, 30, 30, 0.3); 
+    z-index: 45;
+    background-color: rgba(30, 30, 30, 0.3);
     color: white;
     border: none;
     border-radius: 50%;
-    width: 44px; 
-    height: 44px; 
+    width: 44px;
+    height: 44px;
     padding: 0;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: background-color 0.2s ease, opacity 0.2s ease;
-    opacity: 0.65; 
+    opacity: 0.65;
 }
 .modal-nav-arrow:hover {
     background-color: rgba(10, 10, 10, 0.5);
     opacity: 1;
 }
-.modal-nav-arrow:focus { 
-    outline: 2px solid #485fc7; 
+.modal-nav-arrow:focus {
+    outline: 2px solid #485fc7;
     outline-offset: 1px;
     opacity: 1;
 }
-.modal-nav-arrow .icon i { 
+.modal-nav-arrow .icon i {
     color: white;
 }
 
 .modal-nav-prev {
-    left: 15px; 
+    left: 15px;
 }
 .modal-nav-next {
-    right: 15px; 
+    right: 15px;
 }
 
-.modal-nav-arrow.is-hidden { 
-    display: none !important; 
+.modal-nav-arrow.is-hidden {
+    display: none !important;
 }
 
 
 /* Responsive Adjustments */
-@media screen and (max-width: 1023px) { /* Tablet */
+@media screen and (max-width: 1023px) { /* Tablet and wider mobile */
     html, body { height: auto; overflow: auto; }
     .main-section { height: auto; }
     .full-height-columns, .intro-pane, .content-pane { height: auto; }
@@ -401,7 +388,7 @@ html, body {
     }
     .menu-list a { text-align: left; }
 
-    .profile-pic img {
+    .profile-pic img { /* Profile pic size for tablet */
         width: 175px;
         height: 175px;
     }
@@ -410,12 +397,103 @@ html, body {
         font-size: 1rem;
     }
 
+    /* --- Portfolio Grid on Tablet AND GENERAL MOBILE --- */
+    .portfolio-css-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        gap: 0.75rem;
+    }
+    /* Adjustments for content within 2-column portfolio tiles */
+    .portfolio-tile-content .tile-text-block h3.title {
+        font-size: 0.9rem !important; 
+        line-height: 1.15 !important; /* Adjusted for better readability */
+        margin-bottom: 0.1rem !important;
+    }
+    .portfolio-tile-content .tile-text-block p {
+        font-size: 0.7rem !important;
+        line-height: 1.2 !important;
+    }
+    .portfolio-tile-content .icon i {
+        font-size: 1.8em; /* Smaller icon */
+    }
+    .portfolio-item figure.portfolio-tile-content {
+        padding: 0.85rem 0.6rem; /* Adjusted padding */
+    }
+}
+
+/* MOBILE SPECIFIC STYLES (further refinements for e.g., < 769px if needed after tablet query) */
+@media screen and (max-width: 768px) {
+
+    /* --- Intro Pane on Mobile --- */
+    .intro-pane .has-text-centered.mb-5.mt-6 {
+        margin-top: 1.5rem !important;
+        margin-bottom: 1rem !important;
+    }
+    .profile-pic img {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* --- Homepage Content Specific Mobile Adjustments --- */
+    #home-content .content.is-medium p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    #home-content .title.is-3.heading-font {
+        font-size: 1.75rem;
+        margin-bottom: 0.75rem !important;
+    }
+    #home-content .highlights-grid .title.is-4 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem !important;
+    }
+
+    /* --- Key Highlights Grid on Mobile --- */
+    #home-content .highlights-grid .columns .column {
+         width: 100% !important;
+         flex: none !important;
+         padding-left: 0.5rem;
+         padding-right: 0.5rem;
+    }
+    #home-content .highlights-grid .box {
+        padding: 1rem;
+    }
+    #home-content .highlights-grid .box .title.is-6 {
+        font-size: 0.95rem;
+        margin-bottom: 0.2rem !important;
+    }
+    #home-content .highlights-grid .box .is-size-7 {
+        font-size: 0.7rem;
+        line-height: 1.4;
+    }
+
+    /* --- About Page Hobby Photos on Mobile (Stacking them) --- */
+    #about-content .columns.is-variable.is-1.is-mobile.is-centered.is-vcentered.my-5 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #about-content .columns.is-variable.is-1.is-mobile.is-centered.is-vcentered.my-5 .column {
+        width: 80% !important;
+        max-width: 400px;
+        flex-basis: auto !important;
+        flex-grow: 0 !important;
+        flex-shrink: 0 !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-bottom: 1.5rem;
+    }
+    #about-content .columns.is-variable.is-1.is-mobile.is-centered.is-vcentered.my-5 .column:last-child {
+        margin-bottom: 0;
+    }
+
+
+    /* Modal adjustments for mobile */
     .modal-card {
-        width: 95%; 
-        margin: 20px auto; 
+        width: 95%;
+        margin: 20px auto;
     }
     .modal-card-body {
-        padding: 1.5rem; 
+        padding: 1.5rem;
     }
     .modal-card-body .content h4.title.modal-section-heading {
         font-size: 1.1rem;
@@ -424,10 +502,10 @@ html, body {
         font-size: 0.9rem;
     }
 
-    .modal-nav-arrow { 
+    .modal-nav-arrow {
         width: 38px;
         height: 38px;
-        background-color: rgba(30, 30, 30, 0.4); 
+        background-color: rgba(30, 30, 30, 0.4);
         opacity: 0.8;
     }
     .modal-nav-prev {
@@ -438,8 +516,53 @@ html, body {
     }
 }
 
-@media screen and (max-width: 768px) { /* Mobile specific overrides */
-     .modal-card-body {
-        padding: 1.25rem; /* Slightly less padding on small mobile */
+/* Styles for very small mobile screens (e.g., < 481px) */
+/* This block is now REMOVED for portfolio items to ensure 2 columns on most mobiles.
+   If you need single column for portfolio on EXTREMELY NARROW screens, you can re-add it.
+   However, the styles below are for other elements that might need further refinement. */
+@media screen and (max-width: 480px) {
+    /* Further refine homepage text for very small screens if needed */
+    #home-content .content.is-medium p {
+        font-size: 0.9rem;
     }
+    #home-content .title.is-3.heading-font {
+        font-size: 1.6rem;
+    }
+    #home-content .highlights-grid .title.is-4 {
+        font-size: 1.15rem;
+    }
+     #home-content .highlights-grid .box .title.is-6 {
+        font-size: 0.9rem;
+    }
+    #home-content .highlights-grid .box .is-size-7 {
+        font-size: 0.65rem; /* very small, use with caution */
+    }
+
+    /* About page hobby photos will inherit stacking from 768px,
+       but you could adjust their width/max-width further if needed for very narrow screens */
+    #about-content .columns.is-variable.is-1.is-mobile.is-centered.is-vcentered.my-5 .column {
+        width: 90% !important;
+        max-width: 320px;
+    }
+
+    /* IF two-column portfolio items are too cramped on very narrow screens,
+       you can uncomment this to make them single column again below 480px */
+    /*
+    .portfolio-css-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .portfolio-tile-content .tile-text-block h3.title {
+        font-size: 1.15rem !important;
+    }
+    .portfolio-tile-content .tile-text-block p {
+        font-size: 0.85rem !important;
+    }
+    .portfolio-tile-content .icon i {
+        font-size: 2em;
+    }
+    .portfolio-item figure.portfolio-tile-content {
+        padding: 1.25rem 1rem;
+    }
+    */
 }

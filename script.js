@@ -1,6 +1,3 @@
-// No changes needed from the previous version. 
-// The JS interacts with '.js-modal-trigger' and populates the modal based on data attributes, 
-// which is independent of whether the layout uses Bulma columns or CSS Grid.
 document.addEventListener('DOMContentLoaded', () => {
     // --- Navigation Logic ---
     const navLinks = document.querySelectorAll('.main-nav a.nav-link');
@@ -28,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             event.preventDefault();
             const targetId = link.getAttribute('data-target');
             switchContent(targetId);
-            closeModal(); 
+            closeModal(); // Close modal if open when navigating
         });
     });
 
@@ -37,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (section.classList.contains('is-active')) { activeFound = true; }
         else { section.classList.remove('is-active'); }
     });
-    if (!activeFound && contentSections.length > 0) { 
+    if (!activeFound && contentSections.length > 0) {
         const homeSection = document.getElementById('home-content');
         if (homeSection) {
              homeSection.classList.add('is-active');
@@ -46,10 +43,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+
     // --- Modal Logic ---
     const modal = document.getElementById('project-modal');
-    // Get all portfolio items that can trigger a modal - Uses the Grid container now
-    const portfolioItems = Array.from(document.querySelectorAll('.portfolio-css-grid .portfolio-item.js-modal-trigger')); 
+    const modalContentElement = modal ? modal.querySelector('.modal-card') : null; // Target for swipe
+    const portfolioItems = Array.from(document.querySelectorAll('.portfolio-css-grid .portfolio-item.js-modal-trigger'));
     const modalCloseButtons = modal ? modal.querySelectorAll('.modal-background, .delete') : [];
     const htmlElement = document.documentElement;
 
@@ -61,56 +59,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const modalNavPrev = modal ? modal.querySelector('.modal-nav-prev') : null;
     const modalNavNext = modal ? modal.querySelector('.modal-nav-next') : null;
-    let currentProjectIndex = -1; 
+    let currentProjectIndex = -1;
 
     function openModalForProject(projectElement, index) {
         if (!projectElement || !modal) return;
-
-        currentProjectIndex = index; 
+        currentProjectIndex = index;
 
         if (!modalProjectTitle || !modalProjectDescription || !modalProjectTech) return;
 
-        // --- Populate Modal ---
         modalProjectTitle.textContent = projectElement.dataset.title || 'Project Details';
         modalProjectDescription.textContent = projectElement.dataset.description || 'No description available.';
         
-        // Populate Skills as Tags
-        modalProjectTech.innerHTML = ''; 
+        modalProjectTech.innerHTML = '';
         const techString = projectElement.dataset.tech || 'Information not specified.';
-
         if (techString && techString !== 'Information not specified.') {
             const techArray = techString.split(',').map(skill => skill.trim());
             techArray.forEach(skill => {
-                if (skill) { 
+                if (skill) {
                     const tag = document.createElement('span');
-                    tag.classList.add('tag', 'is-light', 'is-capitalized'); 
+                    tag.classList.add('tag', 'is-light', 'is-capitalized');
                     tag.textContent = skill;
                     modalProjectTech.appendChild(tag);
                 }
             });
         } else {
             const p = document.createElement('p');
-            p.textContent = techString; 
+            p.textContent = techString;
             modalProjectTech.appendChild(p);
         }
 
-        // Populate Optional Link
         const link = projectElement.dataset.link;
-        if (modalLinkContainer && modalProjectLink && link && link !== '#') { 
+        if (modalLinkContainer && modalProjectLink && link && link !== '#') {
             modalProjectLink.href = link;
             modalLinkContainer.style.display = 'block';
         } else if (modalLinkContainer) {
             modalLinkContainer.style.display = 'none';
         }
-        // --- End Populate Modal ---
 
-        // Update Arrow Visibility
         if (modalNavPrev && modalNavNext) {
             modalNavPrev.classList.toggle('is-hidden', currentProjectIndex <= 0);
             modalNavNext.classList.toggle('is-hidden', currentProjectIndex >= portfolioItems.length - 1);
         }
         
-        // Activate Modal if not already active
         if (!modal.classList.contains('is-active')) {
             modal.classList.add('is-active');
             htmlElement.classList.add('is-clipped');
@@ -118,47 +108,46 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     function closeModal() {
-        if (!modal) return;
+        if (!modal || !modal.classList.contains('is-active')) return; // Check if modal is active
         modal.classList.remove('is-active');
         htmlElement.classList.remove('is-clipped');
-        currentProjectIndex = -1; 
+        currentProjectIndex = -1;
+        if (modalContentElement) {
+            modalContentElement.style.transform = '';
+            modalContentElement.style.opacity = '';
+        }
     }
 
-    // Add click listeners to portfolio items
     portfolioItems.forEach((trigger, index) => {
         trigger.addEventListener('click', (event) => {
             event.preventDefault();
             openModalForProject(trigger, index);
         });
-        trigger.setAttribute('tabindex', '0'); 
+        trigger.setAttribute('tabindex', '0');
         trigger.style.cursor = 'pointer';
-        trigger.addEventListener('keydown', (event) => { 
+        trigger.addEventListener('keydown', (event) => {
              if (event.key === 'Enter') {
-                 event.preventDefault(); 
+                 event.preventDefault();
                  openModalForProject(trigger, index);
              }
          });
     });
 
-    // Add listeners to modal close buttons
     if(modalCloseButtons) {
         modalCloseButtons.forEach(closeButton => {
             closeButton.addEventListener('click', closeModal);
         });
     }
     
-    // Keyboard listeners (Escape and Arrows)
     document.addEventListener('keydown', (event) => {
         if (modal && modal.classList.contains('is-active')) {
             if (event.key === "Escape") {
                 closeModal();
             } else if (event.key === "ArrowLeft") {
-                // Trigger previous button only if it's visible
                 if (modalNavPrev && !modalNavPrev.classList.contains('is-hidden')) {
                     modalNavPrev.click();
                 }
             } else if (event.key === "ArrowRight") {
-                 // Trigger next button only if it's visible
                  if (modalNavNext && !modalNavNext.classList.contains('is-hidden')) {
                     modalNavNext.click();
                 }
@@ -166,7 +155,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Add click listeners for modal navigation arrows
     if (modalNavPrev) {
         modalNavPrev.addEventListener('click', () => {
             if (currentProjectIndex > 0) {
@@ -179,6 +167,59 @@ document.addEventListener('DOMContentLoaded', () => {
             if (currentProjectIndex < portfolioItems.length - 1) {
                 openModalForProject(portfolioItems[currentProjectIndex + 1], currentProjectIndex + 1);
             }
+        });
+    }
+
+    // --- Swipe Gesture Logic for Modal ---
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchEndX = 0;
+    let touchEndY = 0;
+    const swipeThreshold = 50; 
+    const swipeCloseThresholdY = -70; // Made slightly less negative (easier to trigger close)
+    const maxVerticalSwipeForNav = 40; // Allow a bit more verticality for nav swipe
+
+    if (modalContentElement) {
+        modalContentElement.addEventListener('touchstart', (event) => {
+            if (event.touches.length === 1 && modal.classList.contains('is-active')) { // Only if modal is active
+                touchStartX = event.touches[0].clientX;
+                touchStartY = event.touches[0].clientY;
+                touchEndX = touchStartX; // Initialize end points
+                touchEndY = touchStartY;
+            }
+        }, { passive: true });
+
+        modalContentElement.addEventListener('touchmove', (event) => {
+            if (event.touches.length === 1 && modal.classList.contains('is-active')) {
+                touchEndX = event.touches[0].clientX;
+                touchEndY = event.touches[0].clientY;
+            }
+        }, { passive: true });
+
+        modalContentElement.addEventListener('touchend', (event) => {
+            if (event.changedTouches.length === 1 && modal.classList.contains('is-active')) {
+                const deltaX = touchEndX - touchStartX;
+                const deltaY = touchEndY - touchStartY;
+
+                if (Math.abs(deltaX) > swipeThreshold && Math.abs(deltaY) < maxVerticalSwipeForNav) {
+                    if (deltaX < 0) { 
+                        if (modalNavNext && !modalNavNext.classList.contains('is-hidden')) {
+                            modalNavNext.click();
+                        }
+                    } else { 
+                        if (modalNavPrev && !modalNavPrev.classList.contains('is-hidden')) {
+                            modalNavPrev.click();
+                        }
+                    }
+                } else if (deltaY < swipeCloseThresholdY && Math.abs(deltaX) < Math.abs(deltaY) * 2) { 
+                    // Allow more horizontal movement for a predominantly vertical close swipe
+                    closeModal();
+                }
+            }
+            touchStartX = 0;
+            touchStartY = 0;
+            touchEndX = 0;
+            touchEndY = 0;
         });
     }
 });
