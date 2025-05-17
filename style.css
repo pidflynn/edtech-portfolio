@@ -54,6 +54,25 @@ body, .tag, .button, .input, .textarea, .select select, .file-cta, .file-name, .
      font-weight: 700;
 }
 
+/* GLOBAL PARAGRAPH SIZE INCREASE */
+.content p { 
+    font-size: 1.05rem; /* NEW BASE DESKTOP SIZE for most paragraphs */
+    line-height: 1.6; 
+}
+
+/* Keep Home intro paragraphs slightly larger than the new base on desktop */
+#home-content .content p {
+    font-size: 1.15rem; /* Desktop size for home intro paragraphs */
+    line-height: 1.65;
+}
+
+/* Ensure About page intro line retains its specific size */
+#about-content .content p.is-size-5 {
+    font-size: 1.25rem; /* Bulma's .is-size-5 default */
+    line-height: 1.6; /* Or adjust as needed */
+}
+
+
 /* Layout Adjustments */
 html, body {
     height: 100%;
@@ -124,7 +143,7 @@ html, body {
 /* --- PORTFOLIO ITEM STYLING (CSS GRID IMPLEMENTATION) --- */
 .portfolio-css-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Desktop: 4 columns */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 1rem;
 }
 
@@ -444,6 +463,7 @@ html, body {
     }
 
     /* --- Paragraph Text on Mobile --- */
+    /* This includes home intro, about main text, portfolio intro, contact text */
     #home-content .content p,
     #about-content .content p:not(.is-size-5):not(.is-size-7), 
     #portfolio-content > p.mb-4, 
@@ -451,10 +471,13 @@ html, body {
         font-size: 0.9rem; 
         line-height: 1.65;
     }
+    /* Overrides for specifically sized paragraphs like About page intro line */
     #about-content .content p.is-size-5 { 
-        font-size: 1rem; 
+        font-size: 1rem; /* Larger than other mobile paras */
+        line-height: 1.6; /* Ensure consistency or adjust */
         margin-bottom: 0.75em; 
     }
+
 
     #home-content .highlights-grid .box .title.is-6 {
         font-size: 0.95rem;
@@ -524,7 +547,8 @@ html, body {
     .content-section h3.title.is-5 { 
         font-size: 1rem !important; 
     }
-
+    
+    /* --- Paragraph Text on Very Small Mobile --- */
     #home-content .content p,
     #about-content .content p:not(.is-size-5):not(.is-size-7),
     #portfolio-content > p.mb-4,
