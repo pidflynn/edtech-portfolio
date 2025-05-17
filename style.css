@@ -388,7 +388,7 @@ html, body {
     }
     .menu-list a { text-align: left; }
 
-    .profile-pic img { /* Profile pic size for tablet */
+    .profile-pic img { 
         width: 175px;
         height: 175px;
     }
@@ -397,15 +397,13 @@ html, body {
         font-size: 1rem;
     }
 
-    /* --- Portfolio Grid on Tablet AND GENERAL MOBILE --- */
-    .portfolio-css-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    .portfolio-css-grid { 
+        grid-template-columns: repeat(2, 1fr); 
         gap: 0.75rem;
     }
-    /* Adjustments for content within 2-column portfolio tiles */
     .portfolio-tile-content .tile-text-block h3.title {
-        font-size: 0.9rem !important;
-        line-height: 1.15 !important;
+        font-size: 0.9rem !important; 
+        line-height: 1.15 !important; 
         margin-bottom: 0.1rem !important;
     }
     .portfolio-tile-content .tile-text-block p {
@@ -413,17 +411,14 @@ html, body {
         line-height: 1.2 !important;
     }
     .portfolio-tile-content .icon i {
-        font-size: 1.8em;
+        font-size: 1.8em; 
     }
     .portfolio-item figure.portfolio-tile-content {
-        padding: 0.85rem 0.6rem;
+        padding: 0.85rem 0.6rem; 
     }
 }
 
-/* MOBILE SPECIFIC STYLES (further refinements for e.g., < 769px if needed after tablet query) */
 @media screen and (max-width: 768px) {
-
-    /* --- Intro Pane on Mobile --- */
     .intro-pane .has-text-centered.mb-5.mt-6 {
         margin-top: 1.5rem !important;
         margin-bottom: 1rem !important;
@@ -433,34 +428,34 @@ html, body {
         height: 150px;
     }
 
-    /* --- General Mobile Styles for Main Section Headings --- */
     .content-section > h2.title.is-3.heading-font {
-        font-size: 1.4rem; /* Approx 30% smaller than desktop (2rem * 0.7) */
-        margin-bottom: 1rem !important; /* Adjusted margin for smaller title */
-        line-height: 1.25; /* Slightly increased line-height for readability */
+        font-size: 1.4rem; 
+        margin-bottom: 1rem !important; 
+        line-height: 1.25; 
+    }
+    
+    .content-section h3.title.is-4 { 
+        font-size: 1.1rem !important; 
+        margin-bottom: 0.75rem !important;
+    }
+    .content-section h3.title.is-5 { 
+        font-size: 1.05rem !important; 
+        margin-bottom: 0.65rem !important;
     }
 
-    /* --- Homepage Content Specific Mobile Adjustments --- */
-    #home-content .content.is-medium p { 
-        font-size: 0.95rem;
-        line-height: 1.6;
+    /* --- Paragraph Text on Mobile --- */
+    #home-content .content p,
+    #about-content .content p:not(.is-size-5):not(.is-size-7), 
+    #portfolio-content > p.mb-4, 
+    #contact-content .content p {
+        font-size: 0.9rem; 
+        line-height: 1.65;
+    }
+    #about-content .content p.is-size-5 { 
+        font-size: 1rem; 
+        margin-bottom: 0.75em; 
     }
 
-    #home-content .highlights-grid .title.is-4 {
-        font-size: 1.25rem;
-        margin-bottom: 1rem !important;
-    }
-
-    /* --- Key Highlights Grid on Mobile --- */
-    #home-content .highlights-grid .columns .column {
-         width: 100% !important;
-         flex: none !important;
-         padding-left: 0.5rem;
-         padding-right: 0.5rem;
-    }
-    #home-content .highlights-grid .box {
-        padding: 1rem;
-    }
     #home-content .highlights-grid .box .title.is-6 {
         font-size: 0.95rem;
         margin-bottom: 0.2rem !important;
@@ -470,7 +465,6 @@ html, body {
         line-height: 1.4;
     }
 
-    /* --- About Page Hobby Photos on Mobile (Stacking them) --- */
     #about-content .columns.is-variable.is-1.is-mobile.is-centered.is-vcentered.my-5 {
         display: flex;
         flex-direction: column;
@@ -490,8 +484,6 @@ html, body {
         margin-bottom: 0;
     }
 
-
-    /* Modal adjustments for mobile */
     .modal-card {
         width: 95%;
         margin: 20px auto;
@@ -520,21 +512,30 @@ html, body {
     }
 }
 
-/* Styles for very small mobile screens (e.g., < 481px) */
 @media screen and (max-width: 480px) {
-    /* Further refine main section titles for very small screens */
     .content-section > h2.title.is-3.heading-font {
-        font-size: 1.3rem; /* Smaller for very narrow screens */
+        font-size: 1.3rem; 
         margin-bottom: 0.75rem !important;
     }
 
-    #home-content .content.is-medium p {
-        font-size: 0.9rem;
+    .content-section h3.title.is-4 { 
+        font-size: 1.05rem !important; 
+    }
+    .content-section h3.title.is-5 { 
+        font-size: 1rem !important; 
     }
 
-    #home-content .highlights-grid .title.is-4 {
-        font-size: 1.15rem;
+    #home-content .content p,
+    #about-content .content p:not(.is-size-5):not(.is-size-7),
+    #portfolio-content > p.mb-4,
+    #contact-content .content p {
+        font-size: 0.85rem; 
+        line-height: 1.6;
     }
+    #about-content .content p.is-size-5 {
+        font-size: 0.95rem; 
+    }
+    
      #home-content .highlights-grid .box .title.is-6 {
         font-size: 0.9rem;
     }
