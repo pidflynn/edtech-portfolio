@@ -1,0 +1,445 @@
+/* style.css */
+
+/* --- Style for Photo Captions --- */
+.about-photo figcaption {
+    margin-top: 0.5rem; 
+    line-height: 1.2; 
+    color: #4a4a4a; 
+    font-style: italic; 
+}
+
+/* Rule for ALL About page photos */
+.about-photo .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+}
+.about-photo .image { 
+    margin-bottom: 0.25rem;
+}
+
+.modal-card-title { /* This styles the title in the modal header */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    line-height: 1.3;
+    flex-grow: 1;
+    flex-shrink: 1;
+    overflow: hidden;
+    white-space: normal;
+    word-wrap: break-word;
+    margin-right: 20px;
+    text-overflow: ellipsis;
+    color: #363636; 
+    font-weight: 600;
+}
+
+
+/* Apply Custom Fonts */
+body, .tag, .button, .input, .textarea, .select select, .file-cta, .file-name, .pagination-link, .pagination-ellipsis {
+    font-family: 'Poppins', sans-serif;
+}
+.title, .menu-label { /* General .title class from Bulma */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+.logo-font {
+     font-family: 'Merriweather', serif;
+     font-weight: 700;
+     color: #363636;
+}
+.heading-font { /* For section headings like "Project Showcase" */
+    font-family: 'Merriweather', serif;
+     font-weight: 700;
+}
+
+/* Layout Adjustments */
+html, body {
+    height: 100%;
+    overflow: hidden; 
+}
+.main-section {
+    padding: 0;
+    height: 100vh;
+}
+.full-height-columns {
+    height: 100%;
+    margin: 0 !important;
+}
+.intro-pane {
+   height: 100vh;
+   overflow-y: auto;
+}
+
+.intro-content-wrapper {
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.profile-pic img { 
+    display: block;
+    width: 225px;
+    height: 225px;
+    object-fit: cover;
+    object-position: center 15%;
+    border-radius: 8px;
+}
+
+.content-pane {
+    height: 100vh;
+    overflow-y: auto;
+    position: relative;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-section {
+    display: none;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+    width: 100%;
+    flex-shrink: 0;
+}
+.content-section.is-active {
+    display: block;
+    opacity: 1;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.menu-list a {
+    text-align: center;
+     border-radius: 4px;
+}
+.menu-list a.is-active {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #3273dc;
+    font-weight: 600;
+}
+
+/* --- PORTFOLIO ITEM STYLING (CSS GRID IMPLEMENTATION) --- */
+.portfolio-css-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 1rem; 
+}
+
+@media screen and (max-width: 1023px) { /* Tablet */
+    .portfolio-css-grid {
+        grid-template-columns: repeat(2, 1fr); 
+         gap: 0.75rem;
+    }
+}
+@media screen and (max-width: 768px) { /* Mobile */
+    .portfolio-css-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 0.75rem;
+    }
+}
+
+.portfolio-item {
+    position: relative;
+    border-radius: 8px; 
+    cursor: pointer;
+    transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
+    background-color: #ffffff; 
+    box-shadow: 0 3px 6px rgba(0,0,0,0.06);
+    display: flex; 
+    flex-direction: column; 
+}
+
+.portfolio-item:focus,
+.portfolio-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.portfolio-item figure.portfolio-tile-content {
+    width: 100%;
+    flex-grow: 1; 
+    margin: 0;
+    padding: 1.25rem 1rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    border-radius: 8px; 
+}
+
+/* Specific background colors for each tile */
+#portfolio-content .portfolio-item.tile-color-1 figure.portfolio-tile-content { background-color: #e7f3ed; } 
+#portfolio-content .portfolio-item.tile-color-2 figure.portfolio-tile-content { background-color: #fff8e1; } 
+#portfolio-content .portfolio-item.tile-color-3 figure.portfolio-tile-content { background-color: #e3e8f0; } 
+#portfolio-content .portfolio-item.tile-color-4 figure.portfolio-tile-content { background-color: #e3f2fd; } 
+#portfolio-content .portfolio-item.tile-color-5 figure.portfolio-tile-content { background-color: #fbe9e7; } 
+#portfolio-content .portfolio-item.tile-color-6 figure.portfolio-tile-content { background-color: #f3e5f5; } 
+#portfolio-content .portfolio-item.tile-color-7 figure.portfolio-tile-content { background-color: #e0f7fa; } 
+#portfolio-content .portfolio-item.tile-color-8 figure.portfolio-tile-content { background-color: #fffde7; } 
+#portfolio-content .portfolio-item.tile-color-9 figure.portfolio-tile-content { background-color: #e8f5e9; } 
+#portfolio-content .portfolio-item.tile-color-10 figure.portfolio-tile-content { background-color: #e1f5fe; } 
+#portfolio-content .portfolio-item.tile-color-11 figure.portfolio-tile-content { background-color: #f1f8e9; } 
+
+/* Text and Icon colors for Tiles */
+#portfolio-content .portfolio-item.tile-color-1 figure.portfolio-tile-content .title,
+#portfolio-content .portfolio-item.tile-color-1 figure.portfolio-tile-content .icon i,
+#portfolio-content .portfolio-item.tile-color-9 figure.portfolio-tile-content .title,
+#portfolio-content .portfolio-item.tile-color-9 figure.portfolio-tile-content .icon i,
+#portfolio-content .portfolio-item.tile-color-11 figure.portfolio-tile-content .title,
+#portfolio-content .portfolio-item.tile-color-11 figure.portfolio-tile-content .icon i { color: #2e7d32 !important; } 
+
+#portfolio-content .portfolio-item.tile-color-2 figure.portfolio-tile-content .title,
+#portfolio-content .portfolio-item.tile-color-2 figure.portfolio-tile-content .icon i,
+#portfolio-content .portfolio-item.tile-color-8 figure.portfolio-tile-content .title,
+#portfolio-content .portfolio-item.tile-color-8 figure.portfolio-tile-content .icon i { color: #ef6c00 !important; } 
+
+#portfolio-content .portfolio-item.tile-color-3 figure.portfolio-tile-content .title,
+#portfolio-content .portfolio-item.tile-color-3 figure.portfolio-tile-content .icon i { color: #37474f !important; } 
+
+#portfolio-content .portfolio-item.tile-color-4 figure.portfolio-tile-content .title,
+#portfolio-content .portfolio-item.tile-color-4 figure.portfolio-tile-content .icon i,
+#portfolio-content .portfolio-item.tile-color-7 figure.portfolio-tile-content .title,
+#portfolio-content .portfolio-item.tile-color-7 figure.portfolio-tile-content .icon i,
+#portfolio-content .portfolio-item.tile-color-10 figure.portfolio-tile-content .title,
+#portfolio-content .portfolio-item.tile-color-10 figure.portfolio-tile-content .icon i { color: #0277bd !important; } 
+
+#portfolio-content .portfolio-item.tile-color-5 figure.portfolio-tile-content .title,
+#portfolio-content .portfolio-item.tile-color-5 figure.portfolio-tile-content .icon i { color: #d84315 !important; } 
+
+#portfolio-content .portfolio-item.tile-color-6 figure.portfolio-tile-content .title,
+#portfolio-content .portfolio-item.tile-color-6 figure.portfolio-tile-content .icon i { color: #4e342e !important; } 
+
+
+.portfolio-tile-content .icon {
+    margin-bottom: 0.5rem; 
+    flex-shrink: 0;
+}
+.portfolio-tile-content .icon i { 
+    font-size: 2.2em; 
+}
+
+.portfolio-tile-content .tile-text-block {
+    flex-shrink: 0; 
+    width: 100%;
+}
+
+.portfolio-tile-content .tile-text-block h3.title { 
+    font-weight: 600 !important; 
+    line-height: 1.2 !important; 
+    margin-top: 0 !important;
+    margin-bottom: 0.2rem !important; 
+    font-size: 1.05rem !important; 
+    word-break: break-word; 
+    hyphens: auto; 
+}
+
+.portfolio-tile-content .tile-text-block p {
+    line-height: 1.3 !important; 
+    font-size: 0.75rem !important; 
+    color: #5a5a5a !important; 
+    margin-top: 0 !important; 
+    margin-bottom: 0 !important;
+    max-width: 100%; 
+    word-break: break-word; 
+}
+/* --- END OF PORTFOLIO ITEM STYLING --- */
+
+
+/* Highlights Grid Styling */
+.highlights-grid .box {
+    height: 100%;
+}
+.highlights-grid .grid-heading {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* MODAL STYLING ENHANCEMENTS (TEXT-CENTRIC) */
+.modal-card {
+    transform: scale(0.95) translateY(10px);
+    opacity: 0;
+    transition: transform 0.25s ease-out, opacity 0.25s ease-out;
+    overflow: visible; 
+    border-radius: 8px; 
+    max-width: 720px; 
+    width: 90%; 
+}
+.modal.is-active .modal-card {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+.modal-card-head {
+    background-color: #f7f9fa; 
+    border-bottom: 1px solid #e6eaee;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.modal-card-body {
+    background-color: white;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 2rem 2.5rem; 
+}
+.modal-card-body .content h4.title.modal-section-heading { 
+    color: #3273dc; 
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    border-bottom: 2px solid #eff5fb; 
+    padding-bottom: 0.5rem;
+    font-size: 1.2rem; 
+}
+.modal-card-body .content .modal-section {
+    margin-bottom: 1.75rem;
+}
+.modal-card-body .content .modal-section:last-child {
+    margin-bottom: 0;
+}
+
+.modal-card-body .content #modal-project-description {
+    line-height: 1.7;
+    color: #4a4a4a;
+    font-size: 0.95rem; 
+}
+
+.modal-card-body .content #modal-project-tech.tags {
+    margin-top: 0.5rem; 
+}
+.modal-card-body .content #modal-project-tech.tags .tag {
+    background-color: #eef6ff; 
+    color: #296fa8; 
+    font-weight: 500;
+    margin-bottom: 0.5rem; 
+    margin-right: 0.5rem;
+    font-size: 0.8rem; 
+}
+.modal-card-body .content #modal-project-tech.tags .tag.is-capitalized {
+    text-transform: capitalize;
+}
+
+.hr.is-small-hr { 
+    height: 1px;
+    background-color: #dbdbdb;
+    margin: 1.5rem 0;
+}
+
+/* MODAL NAVIGATION ARROWS STYLING */
+.modal-nav-arrow {
+    position: fixed; 
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 45; 
+    background-color: rgba(30, 30, 30, 0.3); 
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 44px; 
+    height: 44px; 
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+    opacity: 0.65; 
+}
+.modal-nav-arrow:hover {
+    background-color: rgba(10, 10, 10, 0.5);
+    opacity: 1;
+}
+.modal-nav-arrow:focus { 
+    outline: 2px solid #485fc7; 
+    outline-offset: 1px;
+    opacity: 1;
+}
+.modal-nav-arrow .icon i { 
+    color: white;
+}
+
+.modal-nav-prev {
+    left: 15px; 
+}
+.modal-nav-next {
+    right: 15px; 
+}
+
+.modal-nav-arrow.is-hidden { 
+    display: none !important; 
+}
+
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1023px) { /* Tablet */
+    html, body { height: auto; overflow: auto; }
+    .main-section { height: auto; }
+    .full-height-columns, .intro-pane, .content-pane { height: auto; }
+    .intro-pane {
+        position: sticky; top: 0; z-index: 10;
+        box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+        overflow-y: visible;
+    }
+    .intro-content-wrapper {
+        flex-grow: 0;
+        justify-content: flex-start;
+    }
+
+    .columns.full-height-columns { margin-left: -0.75rem !important; margin-right: -0.75rem !important; margin-top: -0.75rem !important; }
+    .content-pane {
+        padding: 1.5rem !important;
+        overflow-y: visible;
+        display: block;
+    }
+     .content-section {
+        padding: 0 !important;
+        min-height: auto;
+    }
+    .menu-list a { text-align: left; }
+
+    .profile-pic img {
+        width: 175px;
+        height: 175px;
+    }
+
+    .highlights-grid .grid-heading {
+        font-size: 1rem;
+    }
+
+    .modal-card {
+        width: 95%; 
+        margin: 20px auto; 
+    }
+    .modal-card-body {
+        padding: 1.5rem; 
+    }
+    .modal-card-body .content h4.title.modal-section-heading {
+        font-size: 1.1rem;
+    }
+     .modal-card-body .content #modal-project-description {
+        font-size: 0.9rem;
+    }
+
+    .modal-nav-arrow { 
+        width: 38px;
+        height: 38px;
+        background-color: rgba(30, 30, 30, 0.4); 
+        opacity: 0.8;
+    }
+    .modal-nav-prev {
+        left: 10px;
+    }
+    .modal-nav-next {
+        right: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) { /* Mobile specific overrides */
+     .modal-card-body {
+        padding: 1.25rem; /* Slightly less padding on small mobile */
+    }
+}
