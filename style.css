@@ -55,9 +55,9 @@ body, .tag, .button, .input, .textarea, .select select, .file-cta, .file-name, .
 }
 
 /* GLOBAL PARAGRAPH SIZE INCREASE */
-.content p { 
+.content p {
     font-size: 1.05rem; /* NEW BASE DESKTOP SIZE for most paragraphs */
-    line-height: 1.6; 
+    line-height: 1.6;
 }
 
 /* Keep Home intro paragraphs slightly larger than the new base on desktop */
@@ -143,7 +143,7 @@ html, body {
 /* --- PORTFOLIO ITEM STYLING (CSS GRID IMPLEMENTATION) --- */
 .portfolio-css-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 }
 
@@ -265,6 +265,20 @@ html, body {
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
+
+/* --- Styles for centering the family photo figure --- */
+.figure-center-container {
+    display: flex;
+    justify-content: center; /* Horizontally centers the flex item (the figure) */
+    width: 100%; /* Ensures the container spans the available width */
+}
+
+.figure-center-container > figure.about-photo {
+    width: 90%;       /* The figure takes up 90% of its parent's centered space */
+    max-width: 700px; /* But not more than 700px wide */
+    /* The .my-5 class on the figure in HTML will handle its top/bottom margins */
+}
+
 
 /* MODAL STYLING ENHANCEMENTS (TEXT-CENTRIC) */
 .modal-card {
@@ -407,7 +421,7 @@ html, body {
     }
     .menu-list a { text-align: left; }
 
-    .profile-pic img { 
+    .profile-pic img {
         width: 175px;
         height: 175px;
     }
@@ -416,13 +430,13 @@ html, body {
         font-size: 1rem;
     }
 
-    .portfolio-css-grid { 
-        grid-template-columns: repeat(2, 1fr); 
+    .portfolio-css-grid {
+        grid-template-columns: repeat(2, 1fr);
         gap: 0.75rem;
     }
     .portfolio-tile-content .tile-text-block h3.title {
-        font-size: 0.9rem !important; 
-        line-height: 1.15 !important; 
+        font-size: 0.9rem !important;
+        line-height: 1.15 !important;
         margin-bottom: 0.1rem !important;
     }
     .portfolio-tile-content .tile-text-block p {
@@ -430,10 +444,10 @@ html, body {
         line-height: 1.2 !important;
     }
     .portfolio-tile-content .icon i {
-        font-size: 1.8em; 
+        font-size: 1.8em;
     }
     .portfolio-item figure.portfolio-tile-content {
-        padding: 0.85rem 0.6rem; 
+        padding: 0.85rem 0.6rem;
     }
 }
 
@@ -448,34 +462,34 @@ html, body {
     }
 
     .content-section > h2.title.is-3.heading-font {
-        font-size: 1.4rem; 
-        margin-bottom: 1rem !important; 
-        line-height: 1.25; 
+        font-size: 1.4rem;
+        margin-bottom: 1rem !important;
+        line-height: 1.25;
     }
-    
-    .content-section h3.title.is-4 { 
-        font-size: 1.1rem !important; 
+
+    .content-section h3.title.is-4 {
+        font-size: 1.1rem !important;
         margin-bottom: 0.75rem !important;
     }
-    .content-section h3.title.is-5 { 
-        font-size: 1.05rem !important; 
+    .content-section h3.title.is-5 {
+        font-size: 1.05rem !important;
         margin-bottom: 0.65rem !important;
     }
 
     /* --- Paragraph Text on Mobile --- */
     /* This includes home intro, about main text, portfolio intro, contact text */
     #home-content .content p,
-    #about-content .content p:not(.is-size-5):not(.is-size-7), 
-    #portfolio-content > p.mb-4, 
+    #about-content .content p:not(.is-size-5):not(.is-size-7),
+    #portfolio-content > p.mb-4,
     #contact-content .content p {
-        font-size: 0.9rem; 
+        font-size: 0.9rem;
         line-height: 1.65;
     }
     /* Overrides for specifically sized paragraphs like About page intro line */
-    #about-content .content p.is-size-5 { 
+    #about-content .content p.is-size-5 {
         font-size: 1rem; /* Larger than other mobile paras */
         line-height: 1.6; /* Ensure consistency or adjust */
-        margin-bottom: 0.75em; 
+        margin-bottom: 0.75em;
     }
 
 
@@ -486,6 +500,11 @@ html, body {
     #home-content .highlights-grid .box .is-size-7 {
         font-size: 0.7rem;
         line-height: 1.4;
+    }
+
+    .figure-center-container > figure.about-photo {
+        width: 100%;
+        max-width: 500px;
     }
 
     #about-content .columns.is-variable.is-1.is-mobile.is-centered.is-vcentered.my-5 {
@@ -537,34 +556,39 @@ html, body {
 
 @media screen and (max-width: 480px) {
     .content-section > h2.title.is-3.heading-font {
-        font-size: 1.3rem; 
+        font-size: 1.3rem;
         margin-bottom: 0.75rem !important;
     }
 
-    .content-section h3.title.is-4 { 
-        font-size: 1.05rem !important; 
+    .content-section h3.title.is-4 {
+        font-size: 1.05rem !important;
     }
-    .content-section h3.title.is-5 { 
-        font-size: 1rem !important; 
+    .content-section h3.title.is-5 {
+        font-size: 1rem !important;
     }
-    
+
     /* --- Paragraph Text on Very Small Mobile --- */
     #home-content .content p,
     #about-content .content p:not(.is-size-5):not(.is-size-7),
     #portfolio-content > p.mb-4,
     #contact-content .content p {
-        font-size: 0.85rem; 
+        font-size: 0.85rem;
         line-height: 1.6;
     }
     #about-content .content p.is-size-5 {
-        font-size: 0.95rem; 
+        font-size: 0.95rem;
     }
-    
+
      #home-content .highlights-grid .box .title.is-6 {
         font-size: 0.9rem;
     }
     #home-content .highlights-grid .box .is-size-7 {
-        font-size: 0.65rem; 
+        font-size: 0.65rem;
+    }
+
+    .figure-center-container > figure.about-photo {
+        max-width: 100%;
+        width: 95%;
     }
 
     #about-content .columns.is-variable.is-1.is-mobile.is-centered.is-vcentered.my-5 .column {
