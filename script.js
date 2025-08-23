@@ -1,4 +1,252 @@
-document.addEventListener('DOMContentLoaded', () => {
+// --- Content Loading Functions ---
+async function loadJSON(url) {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return await response.json();
+    } catch (error) {
+        console.error('Error loading JSON:', error);
+        return null;
+    }
+}
+
+async function loadAllContent() {
+    const [homeData, aboutData, portfolioData, contactData, metadataData] = await Promise.all([
+        loadJSON('content/home.json'),
+        loadJSON('content/about.json'),
+        loadJSON('content/portfolio.json'),
+        loadJSON('content/contact.json'),
+        loadJSON('content/metadata.json')
+    ]);
+
+    if (homeData) renderHomeContent(homeData);
+    if (aboutData) renderAboutContent(aboutData);
+    if (portfolioData) renderPortfolioContent(portfolioData);
+    if (contactData) renderContactContent(contactData);
+    if (metadataData) updateMetadata(metadataData);
+}
+
+function renderHomeContent(data) {
+    const homeSection = document.getElementById('home-content');
+    if (!homeSection) return;
+
+    const heroTitle = homeSection.querySelector('h2.title.is-3');
+    if (heroTitle) heroTitle.innerHTML = data.hero.title;
+
+    const heroParagraphs = homeSection.querySelectorAll('.content p');
+    data.hero.paragraphs.forEach((paragraph, index) => {
+        if (heroParagraphs[index]) {
+            heroParagraphs[index].innerHTML = paragraph;
+        }
+    });
+
+    const highlightsTitle = homeSection.querySelector('h3.title.is-4');
+    if (highlightsTitle) highlightsTitle.textContent = data.highlights.title;
+
+    const highlightsGrid = homeSection.querySelector('.highlights-grid .columns');
+    if (highlightsGrid) {
+        highlightsGrid.innerHTML = '';
+        data.highlights.sections.forEach(section => {
+            const columnDiv = document.createElement('div');
+            columnDiv.className = 'column is-one-third-desktop is-half-tablet';
+            
+            let itemsHTML = '';
+            section.items.forEach(item => {
+                itemsHTML += `
+                    <p class="title is-6 mb-1">${item.title}</p>
+                    <p class="is-size-7 has-text-grey${section.items.indexOf(item) < section.items.length - 1 ? ' mb-2' : ''}">${item.subtitle}</p>
+                `;
+            });
+
+            columnDiv.innerHTML = `
+                <div class="box has-background-white-ter">
+                    <p class="heading has-text-${section.headingColor} has-text-weight-semibold grid-heading">${section.heading}</p>
+                    ${itemsHTML}
+                </div>
+            `;
+            highlightsGrid.appendChild(columnDiv);
+        });
+    }
+}
+
+function renderAboutContent(data) {
+    const aboutSection = document.getElementById('about-content');
+    if (!aboutSection) return;
+
+    const title = aboutSection.querySelector('h2.title.is-3');
+    if (title) title.innerHTML = data.title;
+
+    const contentDiv = aboutSection.querySelector('.content');
+    if (contentDiv) {
+        let html = `<p>${data.intro}</p>`;
+        
+        data.sections.forEach(section => {
+            html += `<h3 class="title is-5 mt-5 mb-3 has-text-grey-darker">${section.heading}</h3>`;
+            html += `<p>${section.content}</p>`;
+            
+            if (section.additionalParagraph) {
+                html += `<p class="mt-4">${section.additionalParagraph}</p>`;
+            }
+
+            if (section.familyPhoto) {
+                html += `
+                    <div class="figure-center-container">
+                        <figure class="my-5 about-photo">
+                            <div class="image is-16by9">
+                               <img src="${section.familyPhoto.src}" alt="${section.familyPhoto.alt}">
+                            </div>
+                            <figcaption class="is-size-7 has-text-grey has-text-centered mt-1">${section.familyPhoto.caption}</figcaption>
+                        </figure>
+                    </div>
+                `;
+            }
+
+            if (section.photos) {
+                html += '<div class="columns is-variable is-1 is-mobile is-centered is-vcentered my-5">';
+                section.photos.forEach(photo => {
+                    html += `
+                        <div class="column ${photo.columnClass}">
+                            <figure class="about-photo">
+                                <div class="image is-${photo.aspectRatio}">
+                                    <img src="${photo.src}" alt="${photo.alt}">
+                                </div>
+                                <figcaption class="is-size-7 has-text-grey has-text-centered mt-1">${photo.caption}</figcaption>
+                            </figure>
+                        </div>
+                    `;
+                });
+                html += '</div>';
+            }
+
+            if (section.conclusion) {
+                html += `<p class="mt-4">${section.conclusion}</p>`;
+            }
+        });
+        
+        contentDiv.innerHTML = html;
+    }
+}
+
+function renderPortfolioContent(data) {
+    const portfolioSection = document.getElementById('portfolio-content');
+    if (!portfolioSection) return;
+
+    const title = portfolioSection.querySelector('h2.title.is-3');
+    if (title) title.textContent = data.title;
+
+    const subtitle = portfolioSection.querySelector('p.mb-4');
+    if (subtitle) subtitle.textContent = data.subtitle;
+
+    const grid = portfolioSection.querySelector('.portfolio-css-grid');
+    if (grid) {
+        grid.innerHTML = '';
+        data.projects.forEach(project => {
+            const projectDiv = document.createElement('div');
+            projectDiv.className = `portfolio-item js-modal-trigger ${project.tileColor}`;
+            projectDiv.setAttribute('data-title', project.title);
+            projectDiv.setAttribute('data-description', project.description);
+            projectDiv.setAttribute('data-tech', project.technologies);
+            projectDiv.innerHTML = `
+                <figure class="portfolio-tile-content">
+                    <span class="icon is-large"><i class="${project.icon}"></i></span>
+                    <div class="tile-text-block">
+                        <h3 class="title is-5">${project.shortTitle}</h3>
+                        <p>${project.shortDescription}</p>
+                    </div>
+                </figure>
+            `;
+            grid.appendChild(projectDiv);
+        });
+        
+        // Initialize portfolio modal events after rendering
+        initializePortfolioEvents();
+    }
+
+    const footer = portfolioSection.querySelector('p.is-size-7.has-text-grey.has-text-centered.mt-5');
+    if (footer) footer.textContent = data.footer;
+}
+
+function renderContactContent(data) {
+    const contactSection = document.getElementById('contact-content');
+    if (!contactSection) return;
+
+    const title = contactSection.querySelector('h2.title.is-3');
+    if (title) title.textContent = data.title;
+
+    const intro = contactSection.querySelector('.content p');
+    if (intro) intro.textContent = data.intro;
+
+    const contactList = contactSection.querySelector('ul.mt-4.mb-5');
+    if (contactList) {
+        contactList.innerHTML = '';
+        data.contacts.forEach((contact, index) => {
+            const li = document.createElement('li');
+            if (index > 0) li.className = 'mt-2';
+            li.innerHTML = `
+                <strong>${contact.type}:</strong>
+                <a href="${contact.link}" class="has-text-link" ${contact.link.includes('linkedin') ? 'target="_blank" rel="noopener noreferrer"' : ''}>${contact.value}</a>
+            `;
+            contactList.appendChild(li);
+        });
+    }
+
+    const cvButton = contactSection.querySelector('a.button');
+    if (cvButton && data.cvDownload) {
+        cvButton.href = data.cvDownload.href;
+        cvButton.setAttribute('download', data.cvDownload.filename);
+        cvButton.innerHTML = `
+            <span class="icon">
+                <i class="${data.cvDownload.icon}"></i>
+            </span>
+            <span>${data.cvDownload.text}</span>
+        `;
+    }
+}
+
+function updateMetadata(data) {
+    document.title = data.site.title;
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) metaDescription.setAttribute('content', data.site.description);
+    
+    const profileImg = document.querySelector('.profile-pic img');
+    if (profileImg) {
+        profileImg.src = data.profile.profileImage;
+        profileImg.alt = data.profile.profileImageAlt;
+    }
+    
+    const profileName = document.querySelector('.title.is-2.logo-font');
+    if (profileName) profileName.textContent = data.profile.name;
+    
+    const profileSubtitle = document.querySelector('.subtitle.is-5.has-text-grey-darker');
+    if (profileSubtitle) profileSubtitle.textContent = data.profile.title;
+    
+    const socialLinks = document.querySelector('.social-links');
+    if (socialLinks) {
+        socialLinks.innerHTML = `
+            <a href="${data.social.linkedin.url}" target="_blank" rel="noopener noreferrer" class="has-text-info">${data.social.linkedin.text}</a>
+            <span class="mx-2 has-text-grey-light">|</span>
+            <a href="${data.social.email.url}" class="has-text-info">${data.social.email.text}</a>
+        `;
+    }
+    
+    const schemaScript = document.querySelector('script[type="application/ld+json"]');
+    if (schemaScript) {
+        schemaScript.textContent = JSON.stringify(data.schema, null, 2);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+    // Load all content first
+    await loadAllContent();
+    
+    // Initialize portfolio events after content is loaded
+    setTimeout(() => {
+        initializePortfolioEvents();
+    }, 100);
+    
     // --- Navigation Logic ---
     const navLinks = document.querySelectorAll('.main-nav a.nav-link');
     const contentSections = document.querySelectorAll('.content-pane .content-section');
@@ -47,7 +295,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Modal Logic ---
     const modal = document.getElementById('project-modal');
     const modalContentElement = modal ? modal.querySelector('.modal-card') : null; // Target for swipe
-    const portfolioItems = Array.from(document.querySelectorAll('.portfolio-css-grid .portfolio-item.js-modal-trigger'));
     const modalCloseButtons = modal ? modal.querySelectorAll('.modal-background, .delete') : [];
     const htmlElement = document.documentElement;
 
@@ -60,6 +307,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalNavPrev = modal ? modal.querySelector('.modal-nav-prev') : null;
     const modalNavNext = modal ? modal.querySelector('.modal-nav-next') : null;
     let currentProjectIndex = -1;
+    let portfolioItems = [];
 
     function openModalForProject(projectElement, index) {
         if (!projectElement || !modal) return;
@@ -118,20 +366,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    portfolioItems.forEach((trigger, index) => {
-        trigger.addEventListener('click', (event) => {
-            event.preventDefault();
-            openModalForProject(trigger, index);
+    function initializePortfolioEvents() {
+        portfolioItems = Array.from(document.querySelectorAll('.portfolio-css-grid .portfolio-item.js-modal-trigger'));
+        portfolioItems.forEach((trigger, index) => {
+            trigger.addEventListener('click', (event) => {
+                event.preventDefault();
+                openModalForProject(trigger, index);
+            });
+            trigger.setAttribute('tabindex', '0');
+            trigger.style.cursor = 'pointer';
+            trigger.addEventListener('keydown', (event) => {
+                 if (event.key === 'Enter') {
+                     event.preventDefault();
+                     openModalForProject(trigger, index);
+                 }
+             });
         });
-        trigger.setAttribute('tabindex', '0');
-        trigger.style.cursor = 'pointer';
-        trigger.addEventListener('keydown', (event) => {
-             if (event.key === 'Enter') {
-                 event.preventDefault();
-                 openModalForProject(trigger, index);
-             }
-         });
-    });
+    }
 
     if(modalCloseButtons) {
         modalCloseButtons.forEach(closeButton => {

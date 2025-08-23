@@ -1,0 +1,76 @@
+{
+  "hero": {
+    "title": "Integrating Technology, Inspiring Learners.",
+    "paragraphs": [
+      "As an <strong>EdTech Coach</strong> and <strong>IBDP/IGCSE Computer Science Teacher</strong> at the British International School Hanoi, I'm passionate about making technology a powerful and intuitive tool for enhancing teaching effectiveness and enriching how students learn.",
+      "My journey through software development, digital humanities, and international education gives me a unique lens to <strong>bridge technical possibilities with practical pedagogical needs</strong>. My goal is to cultivate digital literacy, computational thinking, and innovative problem-solving in both students and my fellow educators."
+    ]
+  },
+  "highlights": {
+    "title": "Key Highlights",
+    "sections": [
+      {
+        "heading": "Current Roles",
+        "headingColor": "info",
+        "items": [
+          {
+            "title": "EdTech Coach & CS Teacher (IBDP/IGCSE)",
+            "subtitle": "British International School Hanoi (2022-Present)"
+          },
+          {
+            "title": "Chair, Whole School EdTech Committee",
+            "subtitle": "BIS Hanoi (2023-Present)"
+          }
+        ]
+      },
+      {
+        "heading": "Relevant Qualifications",
+        "headingColor": "success",
+        "items": [
+          {
+            "title": "UK Qualified Teacher Status (QTS)",
+            "subtitle": "The Teaching Regulation Agency (2020)"
+          },
+          {
+            "title": "hDip Science (Software Development)",
+            "subtitle": "Maynooth University (2018 - 1.1 Hons)"
+          },
+          {
+            "title": "MA Digital Humanities",
+            "subtitle": "Maynooth University (2012 - 2.1 Hons)"
+          },
+          {
+            "title": "CELTA (Certificate in Teaching English)",
+            "subtitle": "Cambridge English (2013 - Pass)"
+          },
+          {
+            "title": "Google Project Management Certificate",
+            "subtitle": "Coursera (2024)"
+          }
+        ]
+      },
+      {
+        "heading": "Leadership, Curriculum & Outcomes",
+        "headingColor": "danger",
+        "items": [
+          {
+            "title": "Strategic Planning & Policy Dev.",
+            "subtitle": "(School-wide Audits, Needs Analysis, AI Policy)"
+          },
+          {
+            "title": "PD Design & Capacity Building",
+            "subtitle": "(Targeted PD Programmes, Coaching, Resource Creation)"
+          },
+          {
+            "title": "Implementation & Change Mgmt.",
+            "subtitle": "(Hardware Rollouts, Platform Adoption, Digital Workflows)"
+          },
+          {
+            "title": "CS Curriculum Development (KS3-IBDP)",
+            "subtitle": "(Python, Java, Web, AI, Robotics, Comp. Thinking, etc.)"
+          }
+        ]
+      }
+    ]
+  }
+}

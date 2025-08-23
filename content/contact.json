@@ -1,0 +1,22 @@
+{
+  "title": "Contact & Download CV",
+  "intro": "I'm always interested in discussing educational technology, computer science education, and the evolving landscape of international schooling. Please feel free to connect or explore my professional background further.",
+  "contacts": [
+    {
+      "type": "Email",
+      "value": "pid.flynn@gmail.com",
+      "link": "mailto:pid.flynn@gmail.com"
+    },
+    {
+      "type": "LinkedIn",
+      "value": "Connect on LinkedIn",
+      "link": "https://www.linkedin.com/in/patrick-flynn-9bb1a246/"
+    }
+  ],
+  "cvDownload": {
+    "text": "Download CV (.pdf)",
+    "href": "documents/Patrick_Flynn_CV.pdf",
+    "filename": "Patrick_Flynn_CV.pdf",
+    "icon": "fas fa-download"
+  }
+}
