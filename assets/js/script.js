@@ -1,4 +1,4 @@
-// --- Content Loading Functions ---
+// Content Loading
 async function loadJSON(url) {
     try {
         const response = await fetch(url);
@@ -160,7 +160,6 @@ function renderPortfolioContent(data) {
             grid.appendChild(projectDiv);
         });
         
-        // Portfolio events will be initialized later in DOMContentLoaded
     }
 
     const footer = portfolioSection.querySelector('p.is-size-7.has-text-grey.has-text-centered.mt-5');
@@ -238,10 +237,9 @@ function updateMetadata(data) {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
-    // Load all content first
     await loadAllContent();
     
-    // --- Navigation Logic ---
+    // Navigation
     const navLinks = document.querySelectorAll('.main-nav a.nav-link');
     const contentSections = document.querySelectorAll('.content-pane .content-section');
     const contentPane = document.querySelector('.content-pane');
@@ -267,7 +265,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             event.preventDefault();
             const targetId = link.getAttribute('data-target');
             switchContent(targetId);
-            closeModal(); // Close modal if open when navigating
+            closeModal();
         });
     });
 
@@ -286,9 +284,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
 
-    // --- Modal Logic ---
+    // Modal Logic
     const modal = document.getElementById('project-modal');
-    const modalContentElement = modal ? modal.querySelector('.modal-card') : null; // Target for swipe
+    const modalContentElement = modal ? modal.querySelector('.modal-card') : null;
     const modalCloseButtons = modal ? modal.querySelectorAll('.modal-background, .delete') : [];
     const htmlElement = document.documentElement;
 
@@ -350,7 +348,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     
     function closeModal() {
-        if (!modal || !modal.classList.contains('is-active')) return; // Check if modal is active
+        if (!modal || !modal.classList.contains('is-active')) return;
         modal.classList.remove('is-active');
         htmlElement.classList.remove('is-clipped');
         currentProjectIndex = -1;
@@ -378,7 +376,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
-    // Initialize portfolio events after a short delay to ensure DOM is ready
+    // Initialize portfolio events
     setTimeout(() => {
         initializePortfolioEvents();
     }, 200);
@@ -420,21 +418,21 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
-    // --- Swipe Gesture Logic for Modal ---
+    // Modal Swipe Gestures
     let touchStartX = 0;
     let touchStartY = 0;
     let touchEndX = 0;
     let touchEndY = 0;
     const swipeThreshold = 50; 
-    const swipeCloseThresholdY = -70; // Made slightly less negative (easier to trigger close)
-    const maxVerticalSwipeForNav = 40; // Allow a bit more verticality for nav swipe
+    const swipeCloseThresholdY = -70;
+    const maxVerticalSwipeForNav = 40;
 
     if (modalContentElement) {
         modalContentElement.addEventListener('touchstart', (event) => {
-            if (event.touches.length === 1 && modal.classList.contains('is-active')) { // Only if modal is active
+            if (event.touches.length === 1 && modal.classList.contains('is-active')) {
                 touchStartX = event.touches[0].clientX;
                 touchStartY = event.touches[0].clientY;
-                touchEndX = touchStartX; // Initialize end points
+                touchEndX = touchStartX;
                 touchEndY = touchStartY;
             }
         }, { passive: true });
@@ -462,7 +460,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                         }
                     }
                 } else if (deltaY < swipeCloseThresholdY && Math.abs(deltaX) < Math.abs(deltaY) * 2) { 
-                    // Allow more horizontal movement for a predominantly vertical close swipe
                     closeModal();
                 }
             }

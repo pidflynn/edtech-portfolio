@@ -1,6 +1,4 @@
-/* style.css */
-
-/* --- Style for Photo Captions --- */
+/* Photo Captions */
 .about-photo figcaption {
     margin-top: 0.5rem;
     line-height: 1.2;
@@ -8,7 +6,7 @@
     font-style: italic;
 }
 
-/* Rule for ALL About page photos */
+/* About page photos */
 .about-photo .image img {
     width: 100%;
     height: 100%;
@@ -20,7 +18,7 @@
     margin-bottom: 0.25rem;
 }
 
-.modal-card-title { /* This styles the title in the modal header */
+.modal-card-title {
     padding-top: 5px;
     padding-bottom: 5px;
     line-height: 1.3;
@@ -36,11 +34,11 @@
 }
 
 
-/* Apply Custom Fonts */
+/* Custom Fonts */
 body, .tag, .button, .input, .textarea, .select select, .file-cta, .file-name, .pagination-link, .pagination-ellipsis {
     font-family: 'Poppins', sans-serif;
 }
-.title, .menu-label { /* General .title class from Bulma */
+.title, .menu-label {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
 }
@@ -49,27 +47,27 @@ body, .tag, .button, .input, .textarea, .select select, .file-cta, .file-name, .
      font-weight: 700;
      color: #363636;
 }
-.heading-font { /* For section headings like "Project Showcase" */
+.heading-font {
     font-family: 'Merriweather', serif;
      font-weight: 700;
 }
 
-/* GLOBAL PARAGRAPH SIZE INCREASE */
+/* Typography */
 .content p {
-    font-size: 1.05rem; /* NEW BASE DESKTOP SIZE for most paragraphs */
+    font-size: 1.05rem;
     line-height: 1.6;
 }
 
-/* Keep Home intro paragraphs slightly larger than the new base on desktop */
+/* Home intro paragraphs */
 #home-content .content p {
-    font-size: 1.15rem; /* Desktop size for home intro paragraphs */
+    font-size: 1.15rem;
     line-height: 1.65;
 }
 
-/* Ensure About page intro line retains its specific size */
+/* About page intro */
 #about-content .content p.is-size-5 {
-    font-size: 1.25rem; /* Bulma's .is-size-5 default */
-    line-height: 1.6; /* Or adjust as needed */
+    font-size: 1.25rem;
+    line-height: 1.6;
 }
 
 
@@ -140,7 +138,7 @@ html, body {
     font-weight: 600;
 }
 
-/* --- PORTFOLIO ITEM STYLING (CSS GRID IMPLEMENTATION) --- */
+/* Portfolio Grid */
 .portfolio-css-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -252,10 +250,9 @@ html, body {
     max-width: 100%;
     word-break: break-word;
 }
-/* --- END OF PORTFOLIO ITEM STYLING --- */
 
 
-/* Highlights Grid Styling */
+/* Highlights Grid */
 .highlights-grid .box {
     height: 100%;
 }
@@ -266,21 +263,20 @@ html, body {
     letter-spacing: 0.5px;
 }
 
-/* --- Styles for centering the family photo figure --- */
+/* Family photo centering */
 .figure-center-container {
     display: flex;
-    justify-content: center; /* Horizontally centers the flex item (the figure) */
-    width: 100%; /* Ensures the container spans the available width */
+    justify-content: center;
+    width: 100%;
 }
 
 .figure-center-container > figure.about-photo {
-    width: 90%;       /* The figure takes up 90% of its parent's centered space */
-    max-width: 700px; /* But not more than 700px wide */
-    /* The .my-5 class on the figure in HTML will handle its top/bottom margins */
+    width: 90%;
+    max-width: 700px;
 }
 
 
-/* MODAL STYLING ENHANCEMENTS (TEXT-CENTRIC) */
+/* Modal Styling */
 .modal-card {
     transform: scale(0.95) translateY(10px);
     opacity: 0;
@@ -349,7 +345,7 @@ html, body {
     margin: 1.5rem 0;
 }
 
-/* MODAL NAVIGATION ARROWS STYLING */
+/* Modal Navigation */
 .modal-nav-arrow {
     position: fixed;
     top: 50%;
@@ -395,7 +391,7 @@ html, body {
 
 
 /* Responsive Adjustments */
-@media screen and (max-width: 1023px) { /* Tablet and wider mobile */
+@media screen and (max-width: 1023px) {
     html, body { height: auto; overflow: auto; }
     .main-section { height: auto; }
     .full-height-columns, .intro-pane, .content-pane { height: auto; }
@@ -476,8 +472,7 @@ html, body {
         margin-bottom: 0.65rem !important;
     }
 
-    /* --- Paragraph Text on Mobile --- */
-    /* This includes home intro, about main text, portfolio intro, contact text */
+    /* Mobile paragraph text */
     #home-content .content p,
     #about-content .content p:not(.is-size-5):not(.is-size-7),
     #portfolio-content > p.mb-4,
@@ -485,10 +480,9 @@ html, body {
         font-size: 0.9rem;
         line-height: 1.65;
     }
-    /* Overrides for specifically sized paragraphs like About page intro line */
     #about-content .content p.is-size-5 {
-        font-size: 1rem; /* Larger than other mobile paras */
-        line-height: 1.6; /* Ensure consistency or adjust */
+        font-size: 1rem;
+        line-height: 1.6;
         margin-bottom: 0.75em;
     }
 
@@ -567,7 +561,7 @@ html, body {
         font-size: 1rem !important;
     }
 
-    /* --- Paragraph Text on Very Small Mobile --- */
+    /* Small mobile text */
     #home-content .content p,
     #about-content .content p:not(.is-size-5):not(.is-size-7),
     #portfolio-content > p.mb-4,
