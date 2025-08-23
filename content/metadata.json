@@ -9,8 +9,8 @@
     "name": "Patrick Flynn",
     "title": "EdTech Coach & CS Teacher",
     "jobTitle": "EdTech Coach and International School Computer Science Teacher",
-    "image": "https://www.patrickflynnedtech.com/images/patrick-flynn.jpg",
-    "profileImage": "images/patrick-flynn.jpg",
+    "image": "https://www.patrickflynnedtech.com/assets/images/profile/patrick-flynn.jpg",
+    "profileImage": "assets/images/profile/patrick-flynn.jpg",
     "profileImageAlt": "Patrick Flynn - EdTech Coach and International School CS Teacher"
   },
   "social": {
@@ -46,7 +46,7 @@
     ],
     "knowsLanguage": ["en-GB", "vi-VN"],
     "url": "https://www.patrickflynnedtech.com/",
-    "image": "https://www.patrickflynnedtech.com/images/patrick-flynn.jpg",
+    "image": "https://www.patrickflynnedtech.com/assets/images/profile/patrick-flynn.jpg",
     "sameAs": [
       "https://www.linkedin.com/in/patrick-flynn-9bb1a246/"
     ],

@@ -1,0 +1,105 @@
+# ======================
+# EdTech Portfolio - .gitignore
+# ======================
+
+# Operating System Files
+# =======================
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+*.Zone.Identifier
+
+# Linux
+*~
+.directory
+
+# Development Tools
+# ==================
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Package managers
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+
+# Compressed files (unless intentionally tracked)
+# *.zip
+# *.tar
+# *.tar.gz
+# *.rar
+
+# Build outputs (if using build tools in future)
+dist/
+build/
+out/
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Cache directories
+.cache/
+.parcel-cache/
+
+# Testing
+coverage/
+.nyc_output/
+
+# Static site generators
+.next/
+.nuxt/
+.gatsby/
+
+# Misc
+*.pid
+*.seed
+*.pid.lock

@@ -14,7 +14,7 @@
     {
       "heading": "Personal Life & Values",
       "familyPhoto": {
-        "src": "images/flynn-family.jpeg",
+        "src": "assets/images/about/flynn-family.jpeg",
         "alt": "Patrick Flynn with his wife and two children.",
         "caption": "My family and I value international experiences and cultural immersion."
       },
@@ -26,21 +26,21 @@
       "content": "Outside school and family, I'm passionate about staying active – often at the gym or cycling. Having coached <strong>JV and Varsity football teams</strong> at BIS Hanoi and holding <strong>GAA coaching certificates</strong> from Ireland, I enjoy contributing to extracurriculars. I also play <strong>guitar and bass guitar</strong>, frequently participating in student and teacher bands in every school I've been part of. Naturally, I'm a lifelong supporter of Newcastle United FC! A few years ago, walking the Camino de Santiago was an incredible test of perseverance and reflection.",
       "photos": [
         {
-          "src": "images/coaching_2.jpg",
+          "src": "assets/images/about/coaching_2.jpg",
           "alt": "Patrick Flynn holding a championship banner with the Hanoi Sports League High School Boys Football team",
           "caption": "Celebrating a championship win with the team.",
           "aspectRatio": "4by5",
           "columnClass": "is-one-quarter-tablet is-half-mobile"
         },
         {
-          "src": "images/playing-football.JPG",
+          "src": "assets/images/about/playing-football.JPG",
           "alt": "Patrick Flynn playing football against students",
           "caption": "Teachers vs. Students!",
           "aspectRatio": "16by9",
           "columnClass": "is-half-tablet is-half-mobile"
         },
         {
-          "src": "images/hiking.jpg",
+          "src": "assets/images/about/hiking.jpg",
           "alt": "Patrick Flynn hiking in Quang Ninh, Vietnam",
           "caption": "Hiking in Quang Ninh",
           "aspectRatio": "3by4",
