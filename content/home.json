@@ -2,8 +2,8 @@
   "hero": {
     "title": "Integrating Technology, Inspiring Learners.",
     "paragraphs": [
-      "As an <strong>EdTech Coach</strong> and <strong>IBDP/IGCSE Computer Science Teacher</strong> at the British International School Hanoi, I'm passionate about making technology a powerful and intuitive tool for enhancing teaching effectiveness and enriching how students learn.",
-      "My journey through software development, digital humanities, and international education gives me a unique lens to <strong>bridge technical possibilities with practical pedagogical needs</strong>. My goal is to cultivate digital literacy, computational thinking, and innovative problem-solving in both students and my fellow educators."
+      "As the <strong>EdTech Coach</strong> at the British International School Hanoi, I work at the intersection of technology, teaching, and school improvement. My role is about more than just tools-it's about strategic planning and change management that help schools use technology in ways that truly make a difference. I've led whole-school audits, written AI policies tailored to education, and designed professional development that actually shifts practice and enhances student learning.",
+      "My path into education is shaped by a background in software development, digital humanities, and international teaching. That mix gives me a practical lens: I understand what's technically possible, but I'm equally focused on what genuinely works in the classroom. Alongside coaching, I also teach Computer Science at IBDP and IGCSE, which keeps me connected to the daily realities teachers and students face."
     ]
   },
   "highlights": {
@@ -42,6 +42,10 @@
           {
             "title": "CELTA (Certificate in Teaching English)",
             "subtitle": "Cambridge English (2013 - Pass)"
+          },
+          {
+            "title": "Microsoft Certified Educator (MCE)",
+            "subtitle": "Microsoft (2025)"
           },
           {
             "title": "Google Project Management Certificate",

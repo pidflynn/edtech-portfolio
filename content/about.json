@@ -1,15 +1,15 @@
 {
   "title": "My Journey in Education & Technology",
-  "intro": "Hello! I'm <strong>Patrick Flynn</strong>. My career is driven by a dual passion: leveraging technology effectively and fostering engaging learning experiences for students in international school settings.",
+  "intro": "Hi, I'm Patrick Flynn. My career has always revolved around two passions: helping schools use technology strategically and creating engaging, meaningful learning experiences for students in international settings.",
   "sections": [
     {
       "heading": "International Teaching Journey",
-      "content": "My international teaching journey began in 2013 after completing my <strong>CELTA</strong> in Hanoi. My subsequent years in Vietnam have been incredibly rewarding, allowing me to develop significantly as an educator and leader. I am deeply committed to continuous professional growth and am always considering how my skills can best contribute to innovative educational environments globally in the long term."
+      "content": "My international teaching journey began in 2013 after completing my <strong>CELTA</strong> in Hanoi. Since then, Vietnam has been my professional and personal home, offering opportunities that have shaped me as both an educator and a leader. I've committed myself to continuous professional development and to finding ways my skills can support innovative, future-focused school communities."
     },
     {
       "heading": "Bridging Technology and Education",
-      "content": "A lifelong tech enthusiast (programming, Raspberry Pis!), my passion led me to a <strong>First Class Honours Higher Diploma in Software Development</strong>. While industry experience as a developer/tester was valuable, my true calling emerged at the <strong>intersection of technology and pedagogy</strong>. To bridge these, I earned my <strong>UK QTS</strong> via Moreland University, transitioning to teach Computer Science internationally in 2019. Since then, I've focused on developing robust CS curricula (KS3-IBDP) and embracing school-wide EdTech leadership.",
-      "additionalParagraph": "Looking ahead, I am excited by the prospect of applying my experience to new leadership and teaching contexts within diverse international school communities, particularly in regions such as Asia, the Middle East, and Europe, as part of my long-term career development."
+      "content": "I've been passionate about technology since I was young, whether it was programming or tinkering with Raspberry Pis. That curiosity eventually led me to earn a <strong>First-Class Honours Higher Diploma in Software Development</strong>. While my years as a developer and tester were valuable, I discovered my real interest lies at the intersection of technology and teaching.",
+      "additionalParagraph": "In 2019, after earning my <strong>UK QTS</strong> through Moreland University, I transitioned into international teaching, specialising in Computer Science. Since then, I've developed curricula across KS3 to IBDP and taken on whole-school EdTech leadership roles. Along the way, I've continued to sharpen my skills, completing the <strong>Google Project Management Certificate</strong> (2024) and becoming a <strong>Microsoft Certified Educator</strong> (2025). These milestones reflect my dedication to bringing purposeful, well-integrated technology into education. Looking ahead, I'm excited to apply my experience in leadership and teaching across diverse international schools, particularly in Asia, the Middle East, and Europe."
     },
     {
       "heading": "Personal Life & Values",
@@ -18,12 +18,12 @@
         "alt": "Patrick Flynn with his wife and two children.",
         "caption": "My family and I value international experiences and cultural immersion."
       },
-      "content": "Family is incredibly important to me. My wife, originally from Vietnam and working as a Regional Systems Manager for the International Schools Partnership (ISP), shares my appreciation for technology and international education. We are proudly raising our two bilingual children, Aisling Chi (5) and Cian Son (2). We believe that exposure to different cultures is invaluable, a perspective that aligns with my professional interest in the global landscape of education.",
-      "additionalParagraph": "I believe deeply in cultural immersion and adaptability; living abroad has given me the opportunity to become fluent in Vietnamese, an experience that has enriched my understanding and underscores my capacity to integrate into new environments."
+      "content": "Family is at the heart of everything I do. My wife, originally from Vietnam, works as a Regional Systems Manager for the International Schools Partnership (ISP), and we share a deep connection to both technology and international education. Together, we're raising our two children, Aisling Chi (5) and Cian Son (2), with the belief that exposure to different cultures is one of the greatest gifts we can give them.",
+      "additionalParagraph": "Living abroad has also shaped my values. Becoming fluent in Vietnamese has not only enriched my daily life but also reinforced my commitment to cultural immersion and adaptability, qualities I bring to my professional work in diverse school communities."
     },
     {
       "heading": "Beyond the Classroom",
-      "content": "Outside school and family, I'm passionate about staying active – often at the gym or cycling. Having coached <strong>JV and Varsity football teams</strong> at BIS Hanoi and holding <strong>GAA coaching certificates</strong> from Ireland, I enjoy contributing to extracurriculars. I also play <strong>guitar and bass guitar</strong>, frequently participating in student and teacher bands in every school I've been part of. Naturally, I'm a lifelong supporter of Newcastle United FC! A few years ago, walking the Camino de Santiago was an incredible test of perseverance and reflection.",
+      "content": "Outside of school, I'm passionate about staying active and involved. I spend time in the gym, cycle regularly, and have coached <strong>JV and Varsity football teams</strong> at BIS Hanoi. I also hold <strong>GAA coaching certificates</strong> from Ireland, and I love contributing to extracurricular life wherever I teach. Music is another outlet. I play guitar and bass, and I've always enjoyed being part of student and teacher bands. And as a lifelong Newcastle United supporter, I know the highs and lows of perseverance all too well! A few years ago, I also had the privilege of walking the Camino de Santiago, an experience that combined both endurance and reflection.",
       "photos": [
         {
           "src": "assets/images/about/coaching_2.jpg",
@@ -47,7 +47,7 @@
           "columnClass": "is-one-quarter-tablet is-half-mobile"
         }
       ],
-      "conclusion": "My diverse background and commitment to continuous learning inform my collaborative and student-centred approach to EdTech leadership. I am always keen to explore how innovative practices can enhance education in various international settings."
+      "conclusion": "My diverse background, international outlook, and commitment to lifelong learning shape my collaborative, student-focused approach to EdTech leadership. I'm always eager to explore how innovative practices can enhance education and enrich school communities."
     }
   ]
 }
