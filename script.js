@@ -160,8 +160,7 @@ function renderPortfolioContent(data) {
             grid.appendChild(projectDiv);
         });
         
-        // Initialize portfolio modal events after rendering
-        initializePortfolioEvents();
+        // Portfolio events will be initialized later in DOMContentLoaded
     }
 
     const footer = portfolioSection.querySelector('p.is-size-7.has-text-grey.has-text-centered.mt-5');
@@ -241,11 +240,6 @@ function updateMetadata(data) {
 document.addEventListener('DOMContentLoaded', async () => {
     // Load all content first
     await loadAllContent();
-    
-    // Initialize portfolio events after content is loaded
-    setTimeout(() => {
-        initializePortfolioEvents();
-    }, 100);
     
     // --- Navigation Logic ---
     const navLinks = document.querySelectorAll('.main-nav a.nav-link');
@@ -383,6 +377,11 @@ document.addEventListener('DOMContentLoaded', async () => {
              });
         });
     }
+
+    // Initialize portfolio events after a short delay to ensure DOM is ready
+    setTimeout(() => {
+        initializePortfolioEvents();
+    }, 200);
 
     if(modalCloseButtons) {
         modalCloseButtons.forEach(closeButton => {
