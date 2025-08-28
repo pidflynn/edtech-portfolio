@@ -2,8 +2,8 @@
   "hero": {
     "title": "Integrating Technology, Inspiring Learners.",
     "paragraphs": [
-      "As the <strong>EdTech Coach</strong> at the British International School Hanoi, I work at the intersection of technology, teaching, and school improvement. My role is about more than just tools-it's about strategic planning and change management that help schools use technology in ways that truly make a difference. I've led whole-school audits, written AI policies tailored to education, and designed professional development that actually shifts practice and enhances student learning.",
-      "My path into education is shaped by a background in software development, digital humanities, and international teaching. That mix gives me a practical lens: I understand what's technically possible, but I'm equally focused on what genuinely works in the classroom. Alongside coaching, I also teach Computer Science at IBDP and IGCSE, which keeps me connected to the daily realities teachers and students face."
+      "As a <strong>QTS-certified EdTech Coach</strong> at the British International School Hanoi, I am a proven leader in developing and implementing data-driven EdTech strategy. My role encompasses strategic planning, change management, and designing impactful professional development that drives meaningful technology integration to enhance student outcomes. I've led comprehensive EdTech audits, developed AI policies, and delivered targeted professional development programs that achieved 95% positive staff feedback while improving digital competency across the school.",
+      "My path into education is shaped by a background in software development, digital humanities, and international teaching. That mix gives me a practical lens: I understand what's technically possible, but I'm equally focused on what genuinely works in the classroom. As a Computer Science teacher delivering IBDP and IGCSE curriculum, I've achieved 97% A*-C in IGCSE and 88% Grades 5-7 in IBDP CS, while pioneering innovative programs like the Student Tech Ambassador initiative and saving over $18,500 through strategic hardware selection processes."
     ]
   },
   "highlights": {
@@ -14,7 +14,7 @@
         "headingColor": "info",
         "items": [
           {
-            "title": "EdTech Coach & CS Teacher (IBDP/IGCSE)",
+            "title": "EdTech Coach and CS Teacher (IBDP/IGCSE)",
             "subtitle": "British International School Hanoi (2022-Present)"
           },
           {
@@ -54,20 +54,20 @@
         ]
       },
       {
-        "heading": "Leadership, Curriculum & Outcomes",
+        "heading": "Leadership, Curriculum and Outcomes",
         "headingColor": "danger",
         "items": [
           {
-            "title": "Strategic Planning & Policy Dev.",
+            "title": "Strategic Planning and Policy Dev.",
             "subtitle": "(School-wide Audits, Needs Analysis, AI Policy)"
           },
           {
-            "title": "PD Design & Capacity Building",
-            "subtitle": "(Targeted PD Programmes, Coaching, Resource Creation)"
+            "title": "PD Design and Capacity Building",
+            "subtitle": "(95% Positive Feedback, 50+ Micro-learning Videos)"
           },
           {
-            "title": "Implementation & Change Mgmt.",
-            "subtitle": "(Hardware Rollouts, Platform Adoption, Digital Workflows)"
+            "title": "Implementation and Change Mgmt.",
+            "subtitle": "(Student Tech Ambassadors, $18,500+ Savings)"
           },
           {
             "title": "CS Curriculum Development (KS3-IBDP)",

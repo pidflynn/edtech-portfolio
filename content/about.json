@@ -1,5 +1,5 @@
 {
-  "title": "My Journey in Education & Technology",
+  "title": "My Journey in Education and Technology",
   "intro": "Hi, I'm Patrick Flynn. My career has always revolved around two passions: helping schools use technology strategically and creating engaging, meaningful learning experiences for students in international settings.",
   "sections": [
     {
@@ -9,10 +9,10 @@
     {
       "heading": "Bridging Technology and Education",
       "content": "I've been passionate about technology since I was young, whether it was programming or tinkering with Raspberry Pis. That curiosity eventually led me to earn a <strong>First-Class Honours Higher Diploma in Software Development</strong>. While my years as a developer and tester were valuable, I discovered my real interest lies at the intersection of technology and teaching.",
-      "additionalParagraph": "In 2019, after earning my <strong>UK QTS</strong> through Moreland University, I transitioned into international teaching, specialising in Computer Science. Since then, I've developed curricula across KS3 to IBDP and taken on whole-school EdTech leadership roles. Along the way, I've continued to sharpen my skills, completing the <strong>Google Project Management Certificate</strong> (2024) and becoming a <strong>Microsoft Certified Educator</strong> (2025). These milestones reflect my dedication to bringing purposeful, well-integrated technology into education. Looking ahead, I'm excited to apply my experience in leadership and teaching across diverse international schools, particularly in Asia, the Middle East, and Europe."
+      "additionalParagraph": "In 2019, after earning my <strong>UK QTS</strong> through Moreland University, I transitioned into international teaching, specialising in Computer Science. Since then, I've developed curricula across KS3 to IBDP and taken on whole-school EdTech leadership roles. Along the way, I've continued to sharpen my skills, completing the <strong>Google Project Management Certificate</strong> (2024) and becoming a <strong>Microsoft Certified Educator</strong> (2025). These achievements reflect my commitment to data-driven EdTech strategy and implementing technology solutions that save schools significant resources - including a strategic hardware selection process that saved over $18,500. I've also pioneered innovative programs like the Student Tech Ambassador initiative to build sustainable, peer-led support systems. Looking ahead, I'm excited to apply my experience in leadership and teaching across diverse international schools, particularly in Asia, the Middle East, and Europe."
     },
     {
-      "heading": "Personal Life & Values",
+      "heading": "Personal Life and Values",
       "familyPhoto": {
         "src": "assets/images/about/flynn-family.jpeg",
         "alt": "Patrick Flynn with his wife and two children.",

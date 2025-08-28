@@ -4,18 +4,18 @@
   "projects": [
     {
       "id": 1,
-      "title": "Secondary School EdTech Audit & Strategic Plan Development",
-      "shortTitle": "EdTech Audit & Strategy",
+      "title": "Secondary School EdTech Audit and Strategic Plan Development",
+      "shortTitle": "EdTech Audit and Strategy",
       "description": "Proactively initiated and led a comprehensive secondary school EdTech audit to establish a clear baseline. I walked around classrooms, ran surveys, and interviewed staff, then dug into the data (including a SWOT analysis for the senior team). Worked with leadership, heads of department, and IT to turn what we found into practical strategies that actually shaped our professional development, where we spent our money, and how we supported KS5 students with technology.",
-      "technologies": "Needs Assessment, Initiative & Leadership, Data Collection & Analysis (MS Forms), SWOT Analysis, Strategic Planning, Stakeholder Collaboration, Presentation Skills, Reporting",
+      "technologies": "Needs Assessment, Initiative and Leadership, Data Collection and Analysis (MS Forms), SWOT Analysis, Strategic Planning, Stakeholder Collaboration, Presentation Skills, Reporting",
       "icon": "fas fa-clipboard-check",
       "tileColor": "tile-color-1",
       "shortDescription": "Needs Assessment, Planning"
     },
     {
       "id": 2,
-      "title": "Development of School AI Policy & Guidance Resources",
-      "shortTitle": "AI Policy & Resources",
+      "title": "Development of School AI Policy and Guidance Resources",
+      "shortTitle": "AI Policy and Resources",
       "description": "As Chair of the Whole School EdTech Committee, I spotted where we needed new policies around AI and brought everyone together to write proper guidelines for using generative AI responsibly. Got input from heads of department and teachers, sorted out who was doing what, worked around the tricky scheduling between primary and secondary, then presented our finished framework to the leadership team. Now everyone knows where the boundaries are, so students can innovate safely and teachers feel confident.",
       "technologies": "Policy Development, Committee Leadership, Facilitation, Delegation, Stakeholder Management, AI in Education, Resource Creation, Presentation Skills",
       "icon": "fas fa-brain",
@@ -24,17 +24,17 @@
     },
     {
       "id": 3,
-      "title": "Design & Management of EdTech Pathways PD Programme",
+      "title": "Design and Management of EdTech Pathways PD Programme",
       "shortTitle": "EdTech Pathways PD",
       "description": "Set up and ran the 'EdTech Pathways' PD programme, creating different tracks (AI, iPad, Kognity/OneNote) based on what the audit showed we needed. Ran small groups with 2-12 staff each throughout the year, doing focused sessions and working together on practical tasks. Put on Learning Summits where people could show off what they'd been up to and share their new resources, which really helped everyone's tech skills across the school.",
-      "technologies": "PD Design & Facilitation, Programme Management, Needs Analysis, EdTech Coaching, Adult Learning, AI Tools, iPad Integration, Kognity, OneNote, Event Organisation",
+      "technologies": "PD Design and Facilitation, Programme Management, Needs Analysis, EdTech Coaching, Adult Learning, AI Tools, iPad Integration, Kognity, OneNote, Event Organisation",
       "icon": "fas fa-chalkboard-teacher",
       "tileColor": "tile-color-3",
       "shortDescription": "PD Design, Coaching, Impact"
     },
     {
       "id": 4,
-      "title": "KS4/5 Student Digital Organisation & Workflow Initiative",
+      "title": "KS4/5 Student Digital Organisation and Workflow Initiative",
       "shortTitle": "Student Digital Planners",
       "description": "Worked with HODs to tackle the problems with paper planners (students kept losing them, didn't use them consistently). Helped KS4 and KS5 students switch to digital planners using what we already had (Outlook Calendar, Teams). Set up workshops and made video guides to show them how to actually manage their tasks and plan digitally.",
       "technologies": "Student Training, Digital Literacy, Microsoft 365, Outlook, Teams, Workflow Improvement, Collaboration, Video Guides",
@@ -44,7 +44,7 @@
     },
     {
       "id": 5,
-      "title": "Staff Hardware Evaluation & Procurement Recommendation",
+      "title": "Staff Hardware Evaluation and Procurement Recommendation",
       "shortTitle": "Staff Device Evaluation",
       "description": "Initiated and managed a rigorous trial of 2-in-1 devices (Surface Pro, Dell XPS) vs traditional laptops prior to a large-scale refresh (~80 devices). I analysed what staff actually needed across both primary and secondary, set clear criteria for what we were testing, and systematically gathered feedback over 8 weeks using Forms. Worked closely with leadership and IT throughout, then presented my final recommendation against the 2-in-1s (battery life and heat problems were deal-breakers), which saved us from buying loads of kit that would have made teachers' lives harder.",
       "technologies": "Needs Analysis, Technology Evaluation, Pilot Project Management, Data Collection, Recommendation Reporting, Risk Mitigation, Stakeholder Collaboration",
@@ -54,7 +54,7 @@
     },
     {
       "id": 6,
-      "title": "Organisation & Delivery of Whole-Staff CPD Programmes",
+      "title": "Organisation and Delivery of Whole-Staff CPD Programmes",
       "shortTitle": "Whole-Staff CPD Delivery",
       "description": "Organised three big whole-staff CPD events each year using a carousel format (4-5 choices per session). Chose topics based on school priorities, audit findings, and what staff actually asked for (AI, Trello, Excel basics, that sort of thing). Handled all the logistics - scheduling, communications, getting people signed up - while also running sessions myself and supporting other tech-savvy teachers to lead their own sessions, which really helped spread the knowledge around.",
       "technologies": "PD Organisation, Logistics, Communication, Needs-Based Topics, Session Facilitation, Mentoring, MS Forms",
@@ -64,7 +64,7 @@
     },
     {
       "id": 7,
-      "title": "Departmental IWB Rollout & Change Management Facilitation",
+      "title": "Departmental IWB Rollout and Change Management Facilitation",
       "shortTitle": "Maths IWB Rollout",
       "description": "Got the Maths department successfully moved from their old boards to new BenQ interactive displays, despite some initial pushback. Won them over by really listening to their concerns, building good relationships with the head of department and teachers, finding ways the boards would actually help with maths teaching, providing training that made sense for them, and giving loads of support after installation. Brought together Maths, IT, and leadership to make it all work. Now they use them brilliantly with iPads and other departments look to them as the example.",
       "technologies": "Change Management, Stakeholder Relations, Needs Assessment, Training Design, Technical Support, Project Coordination, BenQ Displays, iPad Integration",
@@ -74,7 +74,7 @@
     },
     {
       "id": 8,
-      "title": "Creation & Curation of Staff Micro-Learning Video Resources",
+      "title": "Creation and Curation of Staff Micro-Learning Video Resources",
       "shortTitle": "Tech Tip Videos",
       "description": "Implemented and curated a 'Tech Tips' micro-learning initiative to address staff skill gaps identified via audit. Made over 50 short videos (under 2 minutes each) covering the key school platforms like iSAMS, Outlook, Teams, plus useful shortcuts for things like the gradebook. Sent them out weekly in staff briefings and kept them all organised online so people could find what they needed when they needed it. Got really good feedback about how much time people were saving.",
       "technologies": "Video Production, Content Curation, Instructional Design, Micro-Learning, Needs Analysis, iSAMS, M365, Communication",
@@ -84,7 +84,7 @@
     },
     {
       "id": 9,
-      "title": "Redesign & Delivery of New Staff Technology Onboarding",
+      "title": "Redesign and Delivery of New Staff Technology Onboarding",
       "shortTitle": "New Staff Tech Onboarding",
       "description": "Redesigned and delivered the technology component of the new staff onboarding programme. Put together engaging, hands-on sessions covering the essential platforms - iSAMS, Outlook, Teams, CPOMS, OneNote. This really helped new staff get up to speed quickly and made sure they knew I was their go-to person for tech support. Got great feedback about how much easier it made settling into the school.",
       "technologies": "Onboarding Design, Training Delivery, Interactive Learning, Platform Expertise, iSAMS, M365, CPOMS, EdTech Support",
@@ -94,7 +94,7 @@
     },
     {
       "id": 10,
-      "title": "Implementation & Facilitation of Student Tech Ambassador Programme",
+      "title": "Implementation and Facilitation of Student Tech Ambassador Programme",
       "shortTitle": "Student Tech Ambassadors",
       "description": "Set up the Student Tech Ambassador programme with Year 10s to tap into their tech knowledge and give them leadership experience. Recruited and mentored the students, set group goals, and ran weekly meetings. Helped them plan and create short videos for other students (operating system tips, OneNote, OneDrive, citation tools, that sort of thing) and provide basic tech support for newcomers, which really helped spread digital skills throughout the school.",
       "technologies": "Programme Implementation, Student Leadership, Mentoring, Peer Education, Video Production Guidance, CapCut",

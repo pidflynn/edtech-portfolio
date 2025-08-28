@@ -1,13 +1,13 @@
 {
   "site": {
-    "title": "Patrick Flynn | EdTech Coach & International School CS Teacher",
-    "description": "Portfolio of Patrick Flynn, an experienced EdTech Coach & IBDP/IGCSE Computer Science Teacher based in Hanoi. Showcasing EdTech leadership, innovative teaching practices, and a commitment to future growth in international education.",
+    "title": "Patrick Flynn | EdTech Coach and International School CS Teacher",
+    "description": "Portfolio of Patrick Flynn, a QTS-certified EdTech Coach and IBDP/IGCSE Computer Science Teacher based in Hanoi. Proven leader in data-driven EdTech strategy, innovative teaching practices, and strategic technology integration in international education.",
     "url": "https://www.patrickflynnedtech.com/",
     "language": "en-GB"
   },
   "profile": {
     "name": "Patrick Flynn",
-    "title": "EdTech Coach & CS Teacher",
+    "title": "EdTech Coach and CS Teacher",
     "jobTitle": "EdTech Coach and International School Computer Science Teacher",
     "image": "https://www.patrickflynnedtech.com/assets/images/profile/patrick-flynn.jpg",
     "profileImage": "assets/images/profile/patrick-flynn.jpg",
@@ -50,7 +50,7 @@
     "sameAs": [
       "https://www.linkedin.com/in/patrick-flynn-9bb1a246/"
     ],
-    "description": "Experienced EdTech Coach and IBDP/IGCSE Computer Science Teacher with a strong background in curriculum development and technology integration. Passionate about shaping the future of learning in international school environments and exploring future leadership and teaching opportunities in diverse educational settings.",
-    "knowsAbout": ["Educational Technology", "Computer Science Education", "Microsoft Certified Educator", "Microsoft Education", "IBDP", "IGCSE", "Curriculum Development", "Professional Development", "EdTech Leadership", "Technology Integration", "Flipped Learning", "Project-Based Learning"]
+    "description": "QTS-certified EdTech Coach and IBDP/IGCSE Computer Science Teacher with proven leadership in data-driven EdTech strategy and curriculum development. Passionate about implementing strategic technology integration that enhances student outcomes in international school environments.",
+    "knowsAbout": ["Educational Technology", "Computer Science Education", "Data-Driven EdTech Strategy", "Microsoft Certified Educator", "Microsoft Education", "IBDP", "IGCSE", "Curriculum Development", "Professional Development", "EdTech Leadership", "Technology Integration", "Strategic Planning", "Change Management", "Flipped Learning", "Project-Based Learning"]
   }
 }
