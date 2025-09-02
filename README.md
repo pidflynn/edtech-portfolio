@@ -6,5 +6,5 @@ Professional portfolio website for Patrick Flynn, EdTech Coach and Computer Scie
 [patrickflynnedtech.com](https://www.patrickflynnedtech.com/)
 
 ## Contact
-- Email: pid.flynn@gmail.com
+- Email: patrickflynnedu@gmail.com
 - LinkedIn: [Patrick Flynn](https://www.linkedin.com/in/patrick-flynn-9bb1a246/)
