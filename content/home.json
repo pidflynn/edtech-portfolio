@@ -2,8 +2,8 @@
   "hero": {
     "title": "Integrating Technology, Inspiring Learners.",
     "paragraphs": [
-      "As a <strong>QTS-certified EdTech Coach and Computer Science Teacher</strong> at the British International School Hanoi, I work at the intersection of strategic technology leadership and classroom practice. I teach IBDP and IGCSE Computer Science while leading data-driven EdTech strategy development across the school. My dual role encompasses strategic planning, change management, and designing impactful professional development that drives meaningful technology integration to enhance student outcomes. I've led comprehensive EdTech audits, developed AI policies, and delivered targeted professional development programs that achieved 95% positive staff feedback while improving digital competency across the school.",
-      "My path into education is shaped by a background in software development, digital humanities, and international teaching. That mix gives me a practical lens: I understand what's technically possible, but I'm equally focused on what genuinely works in the classroom. As a Computer Science teacher delivering IBDP and IGCSE curriculum, I've achieved 97% A*-C in IGCSE and 88% Grades 5-7 in IBDP CS, while pioneering innovative programs like the Student Tech Ambassador initiative and implementing strategic hardware selection processes."
+      "As an EdTech Coach and <strong>QTS-qualified Computer Science Teacher</strong> at the British International School Hanoi, I work at the intersection of strategic technology leadership and classroom practice. I teach IBDP and IGCSE Computer Science while leading data-driven EdTech strategy development across the school. My dual role encompasses strategic planning, change management, and designing impactful professional development that drives meaningful technology integration to enhance student outcomes. I've led comprehensive EdTech audits, developed AI policies, and delivered targeted professional development programs that achieved 95% positive staff feedback while improving digital competency across the school.",
+      "With experience spanning software development, digital humanities, and international teaching, I bring a practical lens to technology integration - understanding both technical possibilities and classroom realities. As a Computer Science teacher delivering IBDP and IGCSE curriculum, I've achieved consistently strong academic outcomes while pioneering innovative programs like the Student Tech Ambassador initiative and implementing strategic processes that deliver measurable impact."
     ]
   },
   "highlights": {
@@ -54,6 +54,28 @@
         ]
       },
       {
+        "heading": "Key Results & Achievements",
+        "headingColor": "warning",
+        "items": [
+          {
+            "title": "IGCSE Computer Science Results",
+            "subtitle": "97% A*-C Grade Achievement (2022-2024)"
+          },
+          {
+            "title": "IBDP Computer Science Results",
+            "subtitle": "88% Grades 5-7 Achievement (2022-2024)"
+          },
+          {
+            "title": "Professional Development Impact",
+            "subtitle": "95% Positive Staff Feedback Across Programs"
+          },
+          {
+            "title": "Cost Savings Through Strategic Planning",
+            "subtitle": "$18,500+ Saved via Hardware Selection Process"
+          }
+        ]
+      },
+      {
         "heading": "Leadership, Curriculum and Outcomes",
         "headingColor": "danger",
         "items": [
@@ -63,7 +85,7 @@
           },
           {
             "title": "PD Design and Capacity Building",
-            "subtitle": "(95% Positive Feedback, 50+ Micro-learning Videos)"
+            "subtitle": "(50+ Micro-learning Videos, Student Tech Ambassadors)"
           },
           {
             "title": "Implementation and Change Mgmt.",
