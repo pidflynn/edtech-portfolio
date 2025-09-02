@@ -54,28 +54,6 @@
         ]
       },
       {
-        "heading": "Key Results & Achievements",
-        "headingColor": "warning",
-        "items": [
-          {
-            "title": "IGCSE Computer Science Results",
-            "subtitle": "97% A*-C Grade Achievement (2022-2024)"
-          },
-          {
-            "title": "IBDP Computer Science Results",
-            "subtitle": "88% Grades 5-7 Achievement (2022-2024)"
-          },
-          {
-            "title": "Professional Development Impact",
-            "subtitle": "95% Positive Staff Feedback Across Programs"
-          },
-          {
-            "title": "Cost Savings Through Strategic Planning",
-            "subtitle": "$18,500+ Saved via Hardware Selection Process"
-          }
-        ]
-      },
-      {
         "heading": "Leadership, Curriculum and Outcomes",
         "headingColor": "danger",
         "items": [
@@ -85,11 +63,15 @@
           },
           {
             "title": "PD Design and Capacity Building",
-            "subtitle": "(50+ Micro-learning Videos, Student Tech Ambassadors)"
+            "subtitle": "(95% Positive Feedback, 50+ Micro-learning Videos)"
           },
           {
             "title": "Implementation and Change Mgmt.",
-            "subtitle": "(Hardware Rollouts, Platform Adoption, Digital Workflows)"
+            "subtitle": "(Hardware Rollouts, $18,500+ Cost Savings, Digital Workflows)"
+          },
+          {
+            "title": "CS Teaching Results (IGCSE/IBDP)",
+            "subtitle": "(97% A*-C IGCSE Results, 88% Grades 5-7 IBDP Results)"
           },
           {
             "title": "CS Curriculum Development (KS3-IBDP)",
